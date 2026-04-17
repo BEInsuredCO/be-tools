@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-17 12:47",
+  "updated_at": "2026-04-17 12:49",
   "staff": [
     {
       "name": "Amado Plata",
@@ -8,10 +8,10 @@
       "premium_goal": 25300.0,
       "items_mtd": 19,
       "items_goal": 32,
-      "vc_mtd": 206,
+      "vc_mtd": 18,
       "vc_goal": 20,
       "quotes_mtd": 47,
-      "quotes_goal": 160,
+      "quotes_goal": 80,
       "policies_mtd": 10
     },
     {
@@ -24,7 +24,7 @@
       "vc_mtd": 0,
       "vc_goal": 20,
       "quotes_mtd": 0,
-      "quotes_goal": 160,
+      "quotes_goal": 80,
       "policies_mtd": 0
     },
     {
@@ -34,10 +34,10 @@
       "premium_goal": 59700.0,
       "items_mtd": 38,
       "items_goal": 64,
-      "vc_mtd": 283,
+      "vc_mtd": 25,
       "vc_goal": 20,
       "quotes_mtd": 43,
-      "quotes_goal": 160,
+      "quotes_goal": 80,
       "policies_mtd": 26
     },
     {
@@ -47,10 +47,10 @@
       "premium_goal": 7294.0,
       "items_mtd": 9,
       "items_goal": 15,
-      "vc_mtd": 11,
+      "vc_mtd": 3,
       "vc_goal": 20,
       "quotes_mtd": 28,
-      "quotes_goal": 160,
+      "quotes_goal": 80,
       "policies_mtd": 8
     },
     {
@@ -60,10 +60,10 @@
       "premium_goal": 62100.0,
       "items_mtd": 16,
       "items_goal": 27,
-      "vc_mtd": 36,
+      "vc_mtd": 6,
       "vc_goal": 20,
       "quotes_mtd": 68,
-      "quotes_goal": 160,
+      "quotes_goal": 80,
       "policies_mtd": 14
     },
     {
@@ -73,10 +73,10 @@
       "premium_goal": 27600.0,
       "items_mtd": 18,
       "items_goal": 30,
-      "vc_mtd": 171,
+      "vc_mtd": 13,
       "vc_goal": 20,
       "quotes_mtd": 90,
-      "quotes_goal": 160,
+      "quotes_goal": 80,
       "policies_mtd": 13
     },
     {
@@ -86,10 +86,10 @@
       "premium_goal": 1218.6,
       "items_mtd": 6,
       "items_goal": 10,
-      "vc_mtd": 5,
+      "vc_mtd": 1,
       "vc_goal": 20,
       "quotes_mtd": 16,
-      "quotes_goal": 160,
+      "quotes_goal": 80,
       "policies_mtd": 5
     },
     {
@@ -99,10 +99,10 @@
       "premium_goal": 63300.0,
       "items_mtd": 27,
       "items_goal": 46,
-      "vc_mtd": 225,
+      "vc_mtd": 19,
       "vc_goal": 20,
       "quotes_mtd": 54,
-      "quotes_goal": 160,
+      "quotes_goal": 80,
       "policies_mtd": 23
     },
     {
