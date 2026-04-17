@@ -112,6 +112,16 @@
     padding: 1px 0 2px;
   }
 
+  .data-updated {
+    font-size: 8px;
+    color: rgba(255,255,255,0.55);
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    margin-top: -4px;
+    padding-bottom: 2px;
+  }
+
   /* ─── MODALS ──────────────────────────────────────────── */
   .modal-overlay {
     display: none;
@@ -282,7 +292,7 @@
   .stat-goal { font-size: 10px; color: #aab2c8; font-weight: 500; }
 
   .bar-track { background: #e8edf5; border-radius: 4px; height: 6px; overflow: hidden; }
-  .bar-fill        { height: 100%; border-radius: 4px; background: linear-gradient(90deg, #4fc3f7, #1565c0); }
+  .bar-fill        { height: 100%; border-radius: 4px; background: linear-gradient(90deg, #4fc3f7, #1565c0); transition: width 0.6s ease; }
   .bar-fill.green  { background: linear-gradient(90deg, #43e97b, #38f9d7); }
   .bar-fill.orange { background: linear-gradient(90deg, #f7971e, #ffd200); }
   .bar-fill.purple { background: linear-gradient(90deg, #a18cd1, #fbc2eb); }
@@ -312,7 +322,7 @@
 
   .promo-bar-row { display: flex; align-items: center; gap: 6px; }
   .promo-bar-track { flex: 1; background: #e8edf5; border-radius: 4px; height: 7px; overflow: hidden; }
-  .promo-bar-fill      { height: 100%; border-radius: 4px; background: linear-gradient(90deg, #f7971e, #ffd200); }
+  .promo-bar-fill      { height: 100%; border-radius: 4px; background: linear-gradient(90deg, #f7971e, #ffd200); transition: width 0.6s ease; }
   .promo-bar-fill.pink { background: linear-gradient(90deg, #f093fb, #f5576c); }
   .promo-bar-fill.teal { background: linear-gradient(90deg, #43e97b, #38f9d7); }
 
@@ -355,6 +365,12 @@
   }
   .footer-logo { font-size: 12px; font-weight: 900; color: #fff; letter-spacing: 1px; text-shadow: 0 1px 4px rgba(0,0,0,0.2); }
   .footer-sub  { font-size: 9px; color: rgba(255,255,255,0.7); font-weight: 500; letter-spacing: 0.4px; }
+
+  /* ─── LOADING STATE ───────────────────────────────────── */
+  .loading-hint {
+    font-size: 9px; color: #aab2c8; text-align: center;
+    padding: 4px 0 2px; font-style: italic;
+  }
 </style>
 </head>
 <body>
@@ -386,6 +402,7 @@
       </div>
     </div>
     <div class="agent-name" id="agent-name-display">Select Agency &amp; Staff</div>
+    <div class="data-updated" id="data-updated-label"></div>
   </div>
 
   <!-- ═══ PERFORMANCE MTD ═══ -->
@@ -398,23 +415,35 @@
       <div class="stats-grid">
         <div class="stat-card">
           <div class="stat-label">Premium MTD</div>
-          <div class="stat-values"><span class="stat-current">$14,280</span><span class="stat-goal">/ $20k</span></div>
-          <div class="bar-track"><div class="bar-fill" style="width:71%"></div></div>
+          <div class="stat-values">
+            <span class="stat-current" id="stat-premium-val">—</span>
+            <span class="stat-goal" id="stat-premium-goal">/ —</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" id="bar-premium" style="width:0%"></div></div>
         </div>
         <div class="stat-card">
           <div class="stat-label">Items MTD</div>
-          <div class="stat-values"><span class="stat-current">18</span><span class="stat-goal">/ 30</span></div>
-          <div class="bar-track"><div class="bar-fill green" style="width:60%"></div></div>
+          <div class="stat-values">
+            <span class="stat-current" id="stat-items-val">—</span>
+            <span class="stat-goal" id="stat-items-goal">/ —</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill green" id="bar-items" style="width:0%"></div></div>
         </div>
         <div class="stat-card">
           <div class="stat-label">VC MTD</div>
-          <div class="stat-values"><span class="stat-current">9</span><span class="stat-goal">/ 15</span></div>
-          <div class="bar-track"><div class="bar-fill orange" style="width:60%"></div></div>
+          <div class="stat-values">
+            <span class="stat-current" id="stat-vc-val">—</span>
+            <span class="stat-goal" id="stat-vc-goal">/ —</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill orange" id="bar-vc" style="width:0%"></div></div>
         </div>
         <div class="stat-card">
           <div class="stat-label">Quotes MTD</div>
-          <div class="stat-values"><span class="stat-current">22</span><span class="stat-goal">/ 40</span></div>
-          <div class="bar-track"><div class="bar-fill purple" style="width:55%"></div></div>
+          <div class="stat-values">
+            <span class="stat-current" id="stat-quotes-val">—</span>
+            <span class="stat-goal" id="stat-quotes-goal">/ —</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill purple" id="bar-quotes" style="width:0%"></div></div>
         </div>
       </div>
     </div>
@@ -438,10 +467,10 @@
           </div>
           <div class="promo-card-sub">Write 126 VC items by <strong id="early-deadline">Apr 24th</strong></div>
           <div class="promo-bar-row">
-            <div class="promo-bar-track"><div class="promo-bar-fill" style="width:68%"></div></div>
-            <span class="promo-count">86 / 126</span>
+            <div class="promo-bar-track"><div class="promo-bar-fill" id="promo-bar-early" style="width:0%"></div></div>
+            <span class="promo-count" id="promo-count-early">— / 126</span>
           </div>
-          <div class="promo-deadline">&#9889; Early deadline &mdash; 7 days left</div>
+          <div class="promo-deadline" id="promo-days-early">&#9889; Early deadline</div>
         </div>
         <div class="promo-card">
           <div class="promo-card-header">
@@ -450,8 +479,8 @@
           </div>
           <div class="promo-card-sub">Write 126 VC items by <strong id="end-deadline">Apr 30th</strong></div>
           <div class="promo-bar-row">
-            <div class="promo-bar-track"><div class="promo-bar-fill pink" style="width:68%"></div></div>
-            <span class="promo-count">86 / 126</span>
+            <div class="promo-bar-track"><div class="promo-bar-fill pink" id="promo-bar-end" style="width:0%"></div></div>
+            <span class="promo-count" id="promo-count-end">— / 126</span>
           </div>
           <div class="promo-deadline red">Month-end deadline</div>
         </div>
@@ -507,7 +536,7 @@
   <!-- ═══ FOOTER ═══ -->
   <div class="footer">
     <span class="footer-logo">BE TOOLS</span>
-    <span class="footer-sub">v1.0 &middot; BE Insured Colorado</span>
+    <span class="footer-sub">v2.0 &middot; BE Insured Colorado</span>
   </div>
 </div>
 
@@ -533,11 +562,6 @@
     <label>Active Staff</label>
     <select id="staff-select">
       <option value="">-- Choose a staff member --</option>
-      <option value="Sarah Mitchell">Sarah Mitchell</option>
-      <option value="James Ortega">James Ortega</option>
-      <option value="Priya Sharma">Priya Sharma</option>
-      <option value="Tyler Brooks">Tyler Brooks</option>
-      <option value="Amanda Chen">Amanda Chen</option>
     </select>
     <div class="modal-btn-row">
       <button class="btn-secondary" onclick="closeModal('modal-staff')">Cancel</button>
@@ -579,6 +603,105 @@
 </div>
 
 <script>
+  // ── Global data store ─────────────────────────────────────────────────────────
+  let PERF_DATA = null;
+  let selectedStaffName = '';
+
+  // ── Fetch live data from GitHub Pages ────────────────────────────────────────
+  const DATA_URL = 'https://beinsuredco.github.io/be-tools/data.json';
+
+  async function loadData() {
+    try {
+      // Cache-bust so we always get the freshest data
+      const res = await fetch(DATA_URL + '?t=' + Date.now());
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      PERF_DATA = await res.json();
+
+      // Populate staff dropdown
+      const sel = document.getElementById('staff-select');
+      sel.innerHTML = '<option value="">-- Choose a staff member --</option>';
+      PERF_DATA.staff.forEach(s => {
+        const opt = document.createElement('option');
+        opt.value = s.name;
+        opt.textContent = s.name;
+        sel.appendChild(opt);
+      });
+
+      // Show last updated timestamp
+      if (PERF_DATA.updated_at) {
+        document.getElementById('data-updated-label').textContent =
+          'Data updated: ' + PERF_DATA.updated_at;
+      }
+
+      // Update team promo bars
+      updatePromoSection();
+
+      // Restore previously selected staff
+      const saved = localStorage.getItem('be_selected_staff');
+      if (saved) {
+        selectedStaffName = saved;
+        updateStatsDisplay(saved);
+        updateNameDisplay();
+      }
+
+    } catch (e) {
+      console.warn('BE Tools: could not load data.json', e);
+      document.getElementById('data-updated-label').textContent = 'Data unavailable — check connection';
+    }
+  }
+
+  // ── Update individual staff stats ─────────────────────────────────────────────
+  function updateStatsDisplay(staffName) {
+    if (!PERF_DATA) return;
+    const s = PERF_DATA.staff.find(x => x.name === staffName);
+    if (!s) return;
+
+    // Helper: format premium
+    function fmtPrem(v) {
+      if (v >= 1000) return '$' + (v / 1000).toFixed(1) + 'k';
+      return '$' + Math.round(v);
+    }
+
+    function pct(val, goal) {
+      if (!goal || goal === 0) return 0;
+      return Math.min(Math.round((val / goal) * 100), 100);
+    }
+
+    // Premium
+    document.getElementById('stat-premium-val').textContent  = fmtPrem(s.premium_mtd);
+    document.getElementById('stat-premium-goal').textContent = '/ ' + fmtPrem(s.premium_goal || 0);
+    document.getElementById('bar-premium').style.width       = pct(s.premium_mtd, s.premium_goal) + '%';
+
+    // Items
+    document.getElementById('stat-items-val').textContent  = s.items_mtd;
+    document.getElementById('stat-items-goal').textContent = '/ ' + (s.items_goal || '—');
+    document.getElementById('bar-items').style.width       = pct(s.items_mtd, s.items_goal) + '%';
+
+    // VC
+    document.getElementById('stat-vc-val').textContent  = s.vc_mtd;
+    document.getElementById('stat-vc-goal').textContent = '/ ' + (s.vc_goal || '—');
+    document.getElementById('bar-vc').style.width       = pct(s.vc_mtd, s.vc_goal) + '%';
+
+    // Quotes
+    document.getElementById('stat-quotes-val').textContent  = s.quotes_mtd;
+    document.getElementById('stat-quotes-goal').textContent = '/ ' + (s.quotes_goal || '—');
+    document.getElementById('bar-quotes').style.width       = pct(s.quotes_mtd, s.quotes_goal) + '%';
+  }
+
+  // ── Update promo bars from team_goals ────────────────────────────────────────
+  function updatePromoSection() {
+    if (!PERF_DATA || !PERF_DATA.team_goals) return;
+    const tg = PERF_DATA.team_goals;
+    const current = tg.vc_current || 0;
+    const goal    = 126; // promo goal is always 126
+
+    const pct = Math.min(Math.round((current / goal) * 100), 100);
+    document.getElementById('promo-bar-early').style.width = pct + '%';
+    document.getElementById('promo-bar-end').style.width   = pct + '%';
+    document.getElementById('promo-count-early').textContent = current + ' / ' + goal;
+    document.getElementById('promo-count-end').textContent   = current + ' / ' + goal;
+  }
+
   // ── Theme CSS variables ───────────────────────────────────────────────────────
   const THEMES = [
     { grad: 'linear-gradient(135deg,#4fc3f7 0%,#1565c0 100%)', btn: 'linear-gradient(135deg,#1565c0 0%,#4fc3f7 100%)' },
@@ -618,6 +741,15 @@
   document.getElementById('early-deadline').textContent    = MONTHS_SHORT[m] + ' ' + earlyDay + 'th';
   document.getElementById('end-deadline').textContent      = MONTHS_SHORT[m] + ' ' + lastDay + 'th';
 
+  // Days remaining callout
+  const today     = new Date(y, m, now.getDate());
+  const earlyDate = new Date(y, m, earlyDay);
+  const endDate   = new Date(y, m, lastDay);
+  const daysToEarly = Math.max(0, Math.round((earlyDate - today) / 86400000));
+  const daysToEnd   = Math.max(0, Math.round((endDate   - today) / 86400000));
+  document.getElementById('promo-days-early').innerHTML =
+    '&#9889; Early deadline &mdash; ' + daysToEarly + ' day' + (daysToEarly !== 1 ? 's' : '') + ' left';
+
   // ── Collapsible sections ──────────────────────────────────────────────────────
   function toggleSection(id) {
     document.getElementById('body-'  + id).classList.toggle('collapsed');
@@ -647,15 +779,16 @@
   function selectStaff() {
     const name = document.getElementById('staff-select').value;
     if (!name) { alert('Please select a staff member.'); return; }
+    selectedStaffName = name;
     localStorage.setItem('be_selected_staff', name);
     closeModal('modal-staff');
     updateNameDisplay();
+    updateStatsDisplay(name);
   }
 
   function updateNameDisplay() {
-    const staff   = localStorage.getItem('be_selected_staff') || '';
     const display = document.getElementById('agent-name-display');
-    display.textContent = staff ? staff : 'Select Agency & Staff';
+    display.textContent = selectedStaffName ? selectedStaffName : 'Select Agency & Staff';
   }
 
   // ── Admin password ────────────────────────────────────────────────────────────
@@ -672,7 +805,7 @@
     }
   }
 
-  // ── Init: restore saved preferences ──────────────────────────────────────────
+  // ── Init: restore saved preferences + load live data ─────────────────────────
   (function init() {
     updateNameDisplay();
     const savedTheme = localStorage.getItem('be_theme');
@@ -680,6 +813,8 @@
       const swatch = document.querySelector('[data-theme="' + savedTheme + '"]');
       if (swatch) { swatch.classList.add('selected'); applyTheme(parseInt(savedTheme)); }
     }
+    // Load live Performology data
+    loadData();
   })();
 </script>
 </body>
