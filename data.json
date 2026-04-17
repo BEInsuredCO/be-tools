@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-04-17 12:26",
+  "updated_at": "2026-04-17 12:32",
   "staff": [
     {
       "name": "Amado Plata",
       "id": "18216",
       "premium_mtd": 14943.51,
-      "premium_goal": 25.3,
+      "premium_goal": 25300.0,
       "items_mtd": 19,
       "items_goal": 32,
       "vc_mtd": 0,
@@ -17,21 +17,21 @@
     {
       "name": "Brendon Ericson",
       "id": "18211",
-      "premium_mtd": 0.0,
-      "premium_goal": 0.0,
-      "items_mtd": 0,
-      "items_goal": 0,
+      "premium_mtd": 145635.56,
+      "premium_goal": 246500.0,
+      "items_mtd": 133,
+      "items_goal": 225,
       "vc_mtd": 0,
       "vc_goal": 0,
-      "quotes_mtd": 0,
+      "quotes_mtd": 99,
       "quotes_goal": 40,
-      "policies_mtd": 0
+      "policies_mtd": 99
     },
     {
       "name": "Jackie Schmidt",
       "id": "18215",
       "premium_mtd": 35252.54,
-      "premium_goal": 59.7,
+      "premium_goal": 59700.0,
       "items_mtd": 38,
       "items_goal": 64,
       "vc_mtd": 0,
@@ -56,25 +56,25 @@
     {
       "name": "Noel Elhardt",
       "id": "20274",
-      "premium_mtd": 36709.75,
-      "premium_goal": 62.1,
-      "items_mtd": 16,
-      "items_goal": 27,
+      "premium_mtd": 291271.12,
+      "premium_goal": 492900.0,
+      "items_mtd": 266,
+      "items_goal": 450,
       "vc_mtd": 0,
       "vc_goal": 0,
-      "quotes_mtd": 14,
+      "quotes_mtd": 198,
       "quotes_goal": 40,
-      "policies_mtd": 14
+      "policies_mtd": 198
     },
     {
       "name": "Ross MacDonald",
       "id": "22976",
       "premium_mtd": 16292.78,
-      "premium_goal": 27.6,
+      "premium_goal": 27600.0,
       "items_mtd": 18,
       "items_goal": 30,
-      "vc_mtd": 87881,
-      "vc_goal": 107,
+      "vc_mtd": 0,
+      "vc_goal": 0,
       "quotes_mtd": 13,
       "quotes_goal": 40,
       "policies_mtd": 13
@@ -96,7 +96,7 @@
       "name": "Sujan Sharma",
       "id": "26037",
       "premium_mtd": 37406.79,
-      "premium_goal": 63.3,
+      "premium_goal": 63300.0,
       "items_mtd": 27,
       "items_goal": 46,
       "vc_mtd": 0,
@@ -108,19 +108,19 @@
     {
       "name": "Tiffany Keutz",
       "id": "35884",
-      "premium_mtd": 145635.56,
-      "premium_goal": 246.5,
-      "items_mtd": 133,
-      "items_goal": 225,
-      "vc_mtd": 87881,
-      "vc_goal": 107,
-      "quotes_mtd": 99,
+      "premium_mtd": 0.0,
+      "premium_goal": 0.0,
+      "items_mtd": 0,
+      "items_goal": 0,
+      "vc_mtd": 0,
+      "vc_goal": 0,
+      "quotes_mtd": 0,
       "quotes_goal": 40,
-      "policies_mtd": 99
+      "policies_mtd": 0
     }
   ],
   "team_goals": {
-    "vc_current": 87881,
+    "vc_current": 85,
     "vc_goal": 107,
     "premium_current": 5.0,
     "premium_goal": 150000.0
