@@ -655,7 +655,7 @@
   function updateNameDisplay() {
     const staff   = localStorage.getItem('be_selected_staff') || '';
     const display = document.getElementById('agent-name-display');
-    display.textContent = staff ? staff + ' \u2014 BE Insured Colorado' : 'Select Agency & Staff';
+    display.textContent = staff ? staff : 'Select Agency & Staff';
   }
 
   // ── Admin password ────────────────────────────────────────────────────────────
