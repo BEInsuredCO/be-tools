@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-17 12:49",
+  "updated_at": "2026-04-17 12:53",
   "staff": [
     {
       "name": "Amado Plata",
@@ -58,13 +58,13 @@
       "id": "20274",
       "premium_mtd": 36709.75,
       "premium_goal": 62100.0,
-      "items_mtd": 16,
-      "items_goal": 27,
+      "items_mtd": 21,
+      "items_goal": 36,
       "vc_mtd": 6,
       "vc_goal": 20,
       "quotes_mtd": 68,
       "quotes_goal": 80,
-      "policies_mtd": 14
+      "policies_mtd": 16
     },
     {
       "name": "Ross MacDonald",
@@ -120,9 +120,9 @@
     }
   ],
   "team_goals": {
-    "vc_current": 0,
-    "vc_goal": 126,
-    "premium_current": 0,
-    "premium_goal": 150000
+    "vc_current": 85,
+    "vc_goal": 107,
+    "premium_current": 87881.0,
+    "premium_goal": 150000.0
   }
 }
