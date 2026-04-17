@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BE Tools</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    background: #f4f7fb;
+    overflow-x: hidden;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #f4f7fb;
+  }
+
+  /* ─── HEADER ──────────────────────────────────────────── */
+  .header {
+    background: var(--grad, linear-gradient(135deg, #4fc3f7 0%, #1565c0 100%));
+    padding: 10px 14px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex-shrink: 0;
+  }
+
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo-wrap img {
+    height: 26px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 1px 3px rgba(0,0,0,0.2));
+  }
+
+  .icon-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 3px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+  }
+  .icon-btn:hover { opacity: 0.7; }
+  .icon-btn svg {
+    width: 16px; height: 16px;
+    stroke: rgba(255,255,255,0.92);
+    fill: none;
+    stroke-width: 1.9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .icon-btn .tooltip {
+    position: absolute;
+    bottom: calc(100% + 7px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(15,30,60,0.9);
+    color: #fff;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    padding: 3px 7px;
+    border-radius: 5px;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 999;
+  }
+  .icon-btn .tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%; left: 50%;
+    transform: translateX(-50%);
+    border: 4px solid transparent;
+    border-top-color: rgba(15,30,60,0.9);
+  }
+  .icon-btn:hover .tooltip { opacity: 1; }
+
+  .agent-name {
+    font-size: 12px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 0.4px;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.25);
+    text-align: center;
+    padding: 1px 0 2px;
+  }
+
+  /* ─── MODALS ──────────────────────────────────────────── */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-overlay.active { display: flex; }
+
+  .modal {
+    background: #fff;
+    border-radius: 14px;
+    padding: 22px 20px 18px;
+    width: 260px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+  }
+
+  .modal h3 {
+    font-size: 13px;
+    font-weight: 800;
+    color: #1a2340;
+    margin-bottom: 14px;
+    text-align: center;
+  }
+
+  .modal label {
+    font-size: 10px;
+    font-weight: 700;
+    color: #7a8aaa;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .modal input, .modal select {
+    width: 100%;
+    border: 1.5px solid #dde4ef;
+    border-radius: 8px;
+    padding: 8px 10px;
+    font-size: 12px;
+    font-family: inherit;
+    color: #1a2340;
+    outline: none;
+    margin-bottom: 12px;
+    background: #fff;
+    transition: border-color 0.2s;
+  }
+  .modal input:focus, .modal select:focus { border-color: #4fc3f7; }
+
+  .modal-btn-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+  }
+
+  .btn-primary {
+    flex: 1;
+    background: var(--btn-grad, linear-gradient(135deg, #4fc3f7, #1565c0));
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 9px;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  .btn-primary:hover { opacity: 0.85; }
+
+  .btn-secondary {
+    flex: 1;
+    background: #f0f4fa;
+    color: #7a8aaa;
+    border: none;
+    border-radius: 8px;
+    padding: 9px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .btn-secondary:hover { background: #e0e8f5; }
+
+  .theme-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+
+  .theme-swatch {
+    height: 36px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2.5px solid transparent;
+    transition: border-color 0.2s, transform 0.15s;
+  }
+  .theme-swatch:hover { transform: scale(1.08); }
+  .theme-swatch.selected { border-color: #1a2340; }
+
+  /* ─── COLLAPSIBLE SECTIONS ────────────────────────────── */
+  .section { border-bottom: 1px solid #dde4ef; overflow: hidden; }
+  .section:last-child { border-bottom: none; }
+
+  .section-header, .promo-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px 14px 7px;
+    cursor: pointer;
+    user-select: none;
+    background: #f4f7fb;
+    transition: background 0.15s;
+  }
+  .section-header:hover, .promo-header-row:hover { background: #edf1f8; }
+
+  .section-title {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #7a8aaa;
+  }
+
+  .caret {
+    width: 14px; height: 14px;
+    stroke: #aab2c8; fill: none;
+    stroke-width: 2.2;
+    stroke-linecap: round; stroke-linejoin: round;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+  }
+  .caret.collapsed { transform: rotate(-90deg); }
+
+  .section-body {
+    padding: 0 14px 12px;
+    transition: max-height 0.35s ease, opacity 0.3s ease, padding-bottom 0.3s ease;
+    max-height: 600px;
+    opacity: 1;
+    overflow: hidden;
+  }
+  .section-body.collapsed {
+    max-height: 0;
+    opacity: 0;
+    padding-bottom: 0;
+  }
+
+  /* ─── STATS ───────────────────────────────────────────── */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .stat-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 8px 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  }
+
+  .stat-label { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: #8a97b0; margin-bottom: 4px; }
+  .stat-values { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 5px; }
+  .stat-current { font-size: 16px; font-weight: 800; color: #1a2340; }
+  .stat-goal { font-size: 10px; color: #aab2c8; font-weight: 500; }
+
+  .bar-track { background: #e8edf5; border-radius: 4px; height: 6px; overflow: hidden; }
+  .bar-fill        { height: 100%; border-radius: 4px; background: linear-gradient(90deg, #4fc3f7, #1565c0); }
+  .bar-fill.green  { background: linear-gradient(90deg, #43e97b, #38f9d7); }
+  .bar-fill.orange { background: linear-gradient(90deg, #f7971e, #ffd200); }
+  .bar-fill.purple { background: linear-gradient(90deg, #a18cd1, #fbc2eb); }
+
+  /* ─── PROMO ───────────────────────────────────────────── */
+  .promo-title-inner { display: flex; align-items: center; gap: 7px; }
+
+  .promo-badge {
+    background: linear-gradient(135deg, #f7971e, #ffd200);
+    color: #fff; font-size: 9px; font-weight: 800;
+    padding: 2px 7px; border-radius: 20px;
+    letter-spacing: 0.4px; text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  }
+
+  .promo-cards { display: flex; flex-direction: column; gap: 8px; }
+
+  .promo-card {
+    background: #fff; border-radius: 10px;
+    padding: 9px 11px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  }
+
+  .promo-card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3px; }
+  .promo-card-label  { font-size: 10px; font-weight: 700; color: #1a2340; }
+  .promo-card-reward { font-size: 11px; font-weight: 800; color: #1565c0; }
+  .promo-card-sub    { font-size: 9px; color: #8a97b0; margin-bottom: 5px; }
+
+  .promo-bar-row { display: flex; align-items: center; gap: 6px; }
+  .promo-bar-track { flex: 1; background: #e8edf5; border-radius: 4px; height: 7px; overflow: hidden; }
+  .promo-bar-fill      { height: 100%; border-radius: 4px; background: linear-gradient(90deg, #f7971e, #ffd200); }
+  .promo-bar-fill.pink { background: linear-gradient(90deg, #f093fb, #f5576c); }
+  .promo-bar-fill.teal { background: linear-gradient(90deg, #43e97b, #38f9d7); }
+
+  .promo-count { font-size: 10px; font-weight: 700; color: #1a2340; white-space: nowrap; }
+  .promo-deadline     { font-size: 9px; color: #f7971e; font-weight: 600; margin-top: 3px; }
+  .promo-deadline.red { color: #f5576c; }
+
+  .promo-placeholder {
+    border: 1.5px dashed #c8d2e8; border-radius: 10px;
+    padding: 10px; text-align: center;
+    color: #b0bcd4; font-size: 10px; font-style: italic;
+  }
+
+  /* ─── BE LINKS ────────────────────────────────────────── */
+  .links-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+
+  .link-btn {
+    background: var(--btn-grad, linear-gradient(135deg, #1565c0 0%, #4fc3f7 100%));
+    color: #fff; border: none; border-radius: 8px;
+    padding: 8px 6px; font-size: 10px; font-weight: 600;
+    text-align: center; cursor: pointer; text-decoration: none;
+    display: flex; align-items: center; justify-content: center;
+    gap: 4px; transition: opacity 0.2s, transform 0.1s;
+    line-height: 1.3; min-height: 36px;
+  }
+  .link-btn:hover { opacity: 0.85; transform: scale(0.97); }
+  .link-btn svg {
+    width: 12px; height: 12px; stroke: #fff; fill: none;
+    stroke-width: 2; flex-shrink: 0;
+    stroke-linecap: round; stroke-linejoin: round;
+  }
+
+  /* ─── FOOTER ──────────────────────────────────────────── */
+  .footer {
+    background: var(--grad, linear-gradient(135deg, #4fc3f7 0%, #1565c0 100%));
+    padding: 7px 14px;
+    display: flex; align-items: center;
+    justify-content: center; gap: 6px;
+    margin-top: auto; flex-shrink: 0;
+  }
+  .footer-logo { font-size: 12px; font-weight: 900; color: #fff; letter-spacing: 1px; text-shadow: 0 1px 4px rgba(0,0,0,0.2); }
+  .footer-sub  { font-size: 9px; color: rgba(255,255,255,0.7); font-weight: 500; letter-spacing: 0.4px; }
+</style>
+</head>
+<body>
+<div class="sidebar">
+
+  <!-- ═══ HEADER ═══ -->
+  <div class="header">
+    <div class="header-top">
+      <div class="logo-wrap">
+        <img src="assets/logo_white.png" alt="BE Logo" />
+      </div>
+      <div class="icon-row">
+        <button class="icon-btn" onclick="openModal('modal-agency')">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 22V12h6v10"/><path d="M3 9h18"/><path d="M9 3v6M15 3v6"/></svg>
+          <span class="tooltip">Agency</span>
+        </button>
+        <button class="icon-btn" onclick="openModal('modal-staff')">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          <span class="tooltip">Staff</span>
+        </button>
+        <button class="icon-btn" onclick="openModal('modal-theme')">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20"/><path d="M12 2c2.5 4 4 7.5 4 10a4 4 0 0 1-8 0c0-2.5 1.5-6 4-10z"/><path d="M2 12h20"/></svg>
+          <span class="tooltip">Theme</span>
+        </button>
+        <button class="icon-btn" onclick="openModal('modal-settings')">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          <span class="tooltip">Settings</span>
+        </button>
+      </div>
+    </div>
+    <div class="agent-name" id="agent-name-display">Select Agency &amp; Staff</div>
+  </div>
+
+  <!-- ═══ PERFORMANCE MTD ═══ -->
+  <div class="section">
+    <div class="section-header" onclick="toggleSection('perf')">
+      <span class="section-title">Performance MTD</span>
+      <svg class="caret" id="caret-perf" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <div class="section-body" id="body-perf">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-label">Premium MTD</div>
+          <div class="stat-values"><span class="stat-current">$14,280</span><span class="stat-goal">/ $20k</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:71%"></div></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Items MTD</div>
+          <div class="stat-values"><span class="stat-current">18</span><span class="stat-goal">/ 30</span></div>
+          <div class="bar-track"><div class="bar-fill green" style="width:60%"></div></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">VC MTD</div>
+          <div class="stat-values"><span class="stat-current">9</span><span class="stat-goal">/ 15</span></div>
+          <div class="bar-track"><div class="bar-fill orange" style="width:60%"></div></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Quotes MTD</div>
+          <div class="stat-values"><span class="stat-current">22</span><span class="stat-goal">/ 40</span></div>
+          <div class="bar-track"><div class="bar-fill purple" style="width:55%"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ PROMO ═══ -->
+  <div class="section">
+    <div class="promo-header-row" onclick="toggleSection('promo')">
+      <div class="promo-title-inner">
+        <span class="section-title" style="margin-bottom:0">Promo</span>
+        <span class="promo-badge" id="promo-month-badge">APRIL PROMO</span>
+      </div>
+      <svg class="caret" id="caret-promo" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <div class="section-body" id="body-promo">
+      <div class="promo-cards">
+        <div class="promo-card">
+          <div class="promo-card-header">
+            <span class="promo-card-label">Team VC Goal</span>
+            <span class="promo-card-reward">$6,000</span>
+          </div>
+          <div class="promo-card-sub">Write 126 VC items by <strong id="early-deadline">Apr 24th</strong></div>
+          <div class="promo-bar-row">
+            <div class="promo-bar-track"><div class="promo-bar-fill" style="width:68%"></div></div>
+            <span class="promo-count">86 / 126</span>
+          </div>
+          <div class="promo-deadline">&#9889; Early deadline &mdash; 7 days left</div>
+        </div>
+        <div class="promo-card">
+          <div class="promo-card-header">
+            <span class="promo-card-label">Team VC Goal</span>
+            <span class="promo-card-reward">$2,500</span>
+          </div>
+          <div class="promo-card-sub">Write 126 VC items by <strong id="end-deadline">Apr 30th</strong></div>
+          <div class="promo-bar-row">
+            <div class="promo-bar-track"><div class="promo-bar-fill pink" style="width:68%"></div></div>
+            <span class="promo-count">86 / 126</span>
+          </div>
+          <div class="promo-deadline red">Month-end deadline</div>
+        </div>
+        <div class="promo-placeholder">+ Additional monthly promo will appear here</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ BE LINKS ═══ -->
+  <div class="section">
+    <div class="section-header" onclick="toggleSection('links')">
+      <span class="section-title">BE Links</span>
+      <svg class="caret" id="caret-links" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <div class="section-body" id="body-links">
+      <div class="links-grid">
+        <a class="link-btn" href="https://app.usecanopy.com/c/BEInsuredColorado" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Canopy Customers
+        </a>
+        <a class="link-btn" href="https://dashboard.usecanopy.com/login" target="_blank">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          Canopy Dashboard
+        </a>
+        <a class="link-btn" href="https://g.page/BEProtectedCO/review" target="_blank">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Google Review
+        </a>
+        <a class="link-btn" href="https://my.hearsaysocial.com/150/group/869576/messages/conversations" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          Hearsay Texting
+        </a>
+        <a class="link-btn" href="https://app.trainual.com/beinsured/steps/19005208/" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          Trainual
+        </a>
+        <a class="link-btn" href="https://allstate.app.link/s6gJHANgLjb" target="_blank">
+          <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          Allstate App
+        </a>
+        <a class="link-btn" href="https://www.agencyhr.com" target="_blank">
+          <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+          Agency HR
+        </a>
+        <a class="link-btn" href="https://forms.gle/VdBMKzRzoKzEyJCm8" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+          LSP Referral
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ FOOTER ═══ -->
+  <div class="footer">
+    <span class="footer-logo">BE TOOLS</span>
+    <span class="footer-sub">v1.0 &middot; BE Insured Colorado</span>
+  </div>
+</div>
+
+<!-- ═══ MODAL: AGENCY ═══ -->
+<div class="modal-overlay" id="modal-agency">
+  <div class="modal">
+    <h3>&#127970; Agency Setup</h3>
+    <label>Agent Number</label>
+    <input type="text" id="input-agent-num" placeholder="e.g. 123456789" />
+    <label>Password</label>
+    <input type="password" id="input-agent-pass" placeholder="Create a password" />
+    <div class="modal-btn-row">
+      <button class="btn-secondary" onclick="closeModal('modal-agency')">Cancel</button>
+      <button class="btn-primary" onclick="saveAgency()">Save Agency</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ MODAL: STAFF ═══ -->
+<div class="modal-overlay" id="modal-staff">
+  <div class="modal">
+    <h3>&#128100; Select Staff Member</h3>
+    <label>Active Staff</label>
+    <select id="staff-select">
+      <option value="">-- Choose a staff member --</option>
+      <option value="Sarah Mitchell">Sarah Mitchell</option>
+      <option value="James Ortega">James Ortega</option>
+      <option value="Priya Sharma">Priya Sharma</option>
+      <option value="Tyler Brooks">Tyler Brooks</option>
+      <option value="Amanda Chen">Amanda Chen</option>
+    </select>
+    <div class="modal-btn-row">
+      <button class="btn-secondary" onclick="closeModal('modal-staff')">Cancel</button>
+      <button class="btn-primary" onclick="selectStaff()">Select</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ MODAL: THEME ═══ -->
+<div class="modal-overlay" id="modal-theme">
+  <div class="modal">
+    <h3>&#127912; Choose Theme</h3>
+    <div class="theme-grid">
+      <div class="theme-swatch selected" style="background:linear-gradient(135deg,#4fc3f7,#1565c0)" data-theme="0" onclick="selectTheme(this)"></div>
+      <div class="theme-swatch" style="background:linear-gradient(135deg,#43e97b,#1a7a4a)" data-theme="1" onclick="selectTheme(this)"></div>
+      <div class="theme-swatch" style="background:linear-gradient(135deg,#f7971e,#c0392b)" data-theme="2" onclick="selectTheme(this)"></div>
+      <div class="theme-swatch" style="background:linear-gradient(135deg,#a18cd1,#6c3483)" data-theme="3" onclick="selectTheme(this)"></div>
+      <div class="theme-swatch" style="background:linear-gradient(135deg,#2c3e50,#4ca1af)" data-theme="4" onclick="selectTheme(this)"></div>
+    </div>
+    <div class="modal-btn-row">
+      <button class="btn-secondary" onclick="closeModal('modal-theme')">Cancel</button>
+      <button class="btn-primary" onclick="closeModal('modal-theme')">Apply</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ MODAL: SETTINGS ═══ -->
+<div class="modal-overlay" id="modal-settings">
+  <div class="modal">
+    <h3>&#9881;&#65039; Admin Settings</h3>
+    <label>Admin Password</label>
+    <input type="password" id="input-admin-pass" placeholder="Enter admin password" />
+    <p id="admin-error" style="color:#f5576c;font-size:10px;margin-top:-8px;margin-bottom:10px;display:none;">Incorrect password. Try again.</p>
+    <div class="modal-btn-row">
+      <button class="btn-secondary" onclick="closeModal('modal-settings')">Cancel</button>
+      <button class="btn-primary" onclick="checkAdminPass()">Unlock</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ── Theme CSS variables ───────────────────────────────────────────────────────
+  const THEMES = [
+    { grad: 'linear-gradient(135deg,#4fc3f7 0%,#1565c0 100%)', btn: 'linear-gradient(135deg,#1565c0 0%,#4fc3f7 100%)' },
+    { grad: 'linear-gradient(135deg,#43e97b 0%,#1a7a4a 100%)', btn: 'linear-gradient(135deg,#1a7a4a 0%,#43e97b 100%)' },
+    { grad: 'linear-gradient(135deg,#f7971e 0%,#c0392b 100%)', btn: 'linear-gradient(135deg,#c0392b 0%,#f7971e 100%)' },
+    { grad: 'linear-gradient(135deg,#a18cd1 0%,#6c3483 100%)', btn: 'linear-gradient(135deg,#6c3483 0%,#a18cd1 100%)' },
+    { grad: 'linear-gradient(135deg,#2c3e50 0%,#4ca1af 100%)', btn: 'linear-gradient(135deg,#4ca1af 0%,#2c3e50 100%)' }
+  ];
+
+  function applyTheme(idx) {
+    const t = THEMES[idx];
+    document.documentElement.style.setProperty('--grad',     t.grad);
+    document.documentElement.style.setProperty('--btn-grad', t.btn);
+    document.querySelectorAll('.header, .footer').forEach(el => el.style.background = t.grad);
+    document.querySelectorAll('.link-btn, .btn-primary').forEach(el => el.style.background = t.btn);
+  }
+
+  function selectTheme(el) {
+    document.querySelectorAll('.theme-swatch').forEach(s => s.classList.remove('selected'));
+    el.classList.add('selected');
+    const idx = parseInt(el.dataset.theme);
+    applyTheme(idx);
+    localStorage.setItem('be_theme', idx);
+    closeModal('modal-theme');
+  }
+
+  // ── Dynamic month labels ──────────────────────────────────────────────────────
+  const MONTHS_LONG  = ['JANUARY','FEBRUARY','MARCH','APRIL','MAY','JUNE','JULY','AUGUST','SEPTEMBER','OCTOBER','NOVEMBER','DECEMBER'];
+  const MONTHS_SHORT = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const now      = new Date();
+  const m        = now.getMonth();
+  const y        = now.getFullYear();
+  const lastDay  = new Date(y, m + 1, 0).getDate();
+  const earlyDay = lastDay - 6;
+
+  document.getElementById('promo-month-badge').textContent = MONTHS_LONG[m] + ' PROMO';
+  document.getElementById('early-deadline').textContent    = MONTHS_SHORT[m] + ' ' + earlyDay + 'th';
+  document.getElementById('end-deadline').textContent      = MONTHS_SHORT[m] + ' ' + lastDay + 'th';
+
+  // ── Collapsible sections ──────────────────────────────────────────────────────
+  function toggleSection(id) {
+    document.getElementById('body-'  + id).classList.toggle('collapsed');
+    document.getElementById('caret-' + id).classList.toggle('collapsed');
+  }
+
+  // ── Modals ────────────────────────────────────────────────────────────────────
+  function openModal(id)  { document.getElementById(id).classList.add('active'); }
+  function closeModal(id) { document.getElementById(id).classList.remove('active'); }
+
+  document.querySelectorAll('.modal-overlay').forEach(o => {
+    o.addEventListener('click', e => { if (e.target === o) o.classList.remove('active'); });
+  });
+
+  // ── Agency ────────────────────────────────────────────────────────────────────
+  function saveAgency() {
+    const num  = document.getElementById('input-agent-num').value.trim();
+    const pass = document.getElementById('input-agent-pass').value.trim();
+    if (!num || !pass) { alert('Please fill in both fields.'); return; }
+    localStorage.setItem('be_agent_num',  num);
+    localStorage.setItem('be_agent_pass', btoa(pass));
+    closeModal('modal-agency');
+    updateNameDisplay();
+  }
+
+  // ── Staff ─────────────────────────────────────────────────────────────────────
+  function selectStaff() {
+    const name = document.getElementById('staff-select').value;
+    if (!name) { alert('Please select a staff member.'); return; }
+    localStorage.setItem('be_selected_staff', name);
+    closeModal('modal-staff');
+    updateNameDisplay();
+  }
+
+  function updateNameDisplay() {
+    const staff   = localStorage.getItem('be_selected_staff') || '';
+    const display = document.getElementById('agent-name-display');
+    display.textContent = staff ? staff + ' \u2014 BE Insured Colorado' : 'Select Agency & Staff';
+  }
+
+  // ── Admin password ────────────────────────────────────────────────────────────
+  const ADMIN_PASS = 'betools2024';
+  function checkAdminPass() {
+    const input = document.getElementById('input-admin-pass').value;
+    const err   = document.getElementById('admin-error');
+    if (input === ADMIN_PASS) {
+      err.style.display = 'none';
+      closeModal('modal-settings');
+      alert('Admin unlocked! Additional features coming soon.');
+    } else {
+      err.style.display = 'block';
+    }
+  }
+
+  // ── Init: restore saved preferences ──────────────────────────────────────────
+  (function init() {
+    updateNameDisplay();
+    const savedTheme = localStorage.getItem('be_theme');
+    if (savedTheme !== null) {
+      const swatch = document.querySelector('[data-theme="' + savedTheme + '"]');
+      if (swatch) { swatch.classList.add('selected'); applyTheme(parseInt(savedTheme)); }
+    }
+  })();
+</script>
+</body>
+</html>
