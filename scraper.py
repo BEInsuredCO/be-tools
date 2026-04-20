@@ -160,19 +160,20 @@ async def scrape():
                     "name": name,
                     "premium_mtd": premium,
                     "items_mtd": items,
+                    "items_goal": 25,
                     "vc_mtd": 0,
                     "vc_goal": 20,
                     "quotes_mtd": 0,
                     "quotes_goal": 80,
-                    "premium_goal": 0,
+                    "premium_goal": 25000,
                 }
                 print(f"    Premium: ${premium:,.0f} | Items: {items}")
             except Exception as e:
                 print(f"    Error: {e}")
                 staff_data[sid] = {
                     "name": name, "premium_mtd": 0, "items_mtd": 0,
-                    "vc_mtd": 0, "vc_goal": 20, "quotes_mtd": 0,
-                    "quotes_goal": 80, "premium_goal": 0,
+                    "items_goal": 25, "vc_mtd": 0, "vc_goal": 20,
+                    "quotes_mtd": 0, "quotes_goal": 80, "premium_goal": 25000,
                 }
 
         # ── PASS 2: Individual Goals (VC + Quotes) ─────────────────────────────
