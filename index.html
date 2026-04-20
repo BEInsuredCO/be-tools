@@ -340,6 +340,24 @@
   /* ─── BE LINKS ────────────────────────────────────────── */
   .links-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
 
+  .link-btn-featured {
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+    width: 100%; margin-bottom: 8px;
+    background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+    color: #fff; border: none; border-radius: 8px;
+    padding: 10px 6px; font-size: 11px; font-weight: 700;
+    text-align: center; cursor: pointer; text-decoration: none;
+    letter-spacing: 0.3px;
+    transition: opacity 0.2s, transform 0.1s;
+    box-shadow: 0 2px 8px rgba(39,174,96,0.3);
+  }
+  .link-btn-featured:hover { opacity: 0.88; transform: scale(0.98); }
+  .link-btn-featured svg {
+    width: 13px; height: 13px; stroke: #fff; fill: none;
+    stroke-width: 2.2; flex-shrink: 0;
+    stroke-linecap: round; stroke-linejoin: round;
+  }
+
   .link-btn {
     background: var(--btn-grad, linear-gradient(135deg, #1565c0 0%, #4fc3f7 100%));
     color: #fff; border: none; border-radius: 8px;
@@ -497,6 +515,10 @@
       <svg class="caret" id="caret-links" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="section-body" id="body-links">
+      <a class="link-btn-featured" href="https://1drv.ms/x/c/0f1b483929fd58c9/EclY_Sk5SBsggA-uggAAAAABLL5rFfT_PbCz5jwy4qbSPQ?e=WH1bOF" target="_blank">
+        <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        Winbacks
+      </a>
       <div class="links-grid">
         <a class="link-btn" href="https://app.usecanopy.com/c/BEInsuredColorado" target="_blank">
           <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
