@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-04-20 20:56",
+  "updated_at": "2026-04-20 21:00",
   "staff": [
     {
       "name": "Amado Plata",
-      "premium_mtd": 0,
-      "items_mtd": 1930,
+      "premium_mtd": 14943.51,
+      "items_mtd": 19,
       "vc_mtd": 18,
       "vc_goal": 20,
       "quotes_mtd": 56,
@@ -23,8 +23,8 @@
     },
     {
       "name": "Jackie Schmidt",
-      "premium_mtd": 0,
-      "items_mtd": 4164,
+      "premium_mtd": 37026.29,
+      "items_mtd": 41,
       "vc_mtd": 27,
       "vc_goal": 20,
       "quotes_mtd": 47,
@@ -33,8 +33,8 @@
     },
     {
       "name": "Jacqulyn Alcala-Casica",
-      "premium_mtd": 0,
-      "items_mtd": 1219,
+      "premium_mtd": 4383.1,
+      "items_mtd": 12,
       "vc_mtd": 3,
       "vc_goal": 20,
       "quotes_mtd": 29,
@@ -43,8 +43,8 @@
     },
     {
       "name": "Noel Elhardt",
-      "premium_mtd": 0,
-      "items_mtd": 2235,
+      "premium_mtd": 40265.16,
+      "items_mtd": 22,
       "vc_mtd": 7,
       "vc_goal": 20,
       "quotes_mtd": 71,
@@ -53,8 +53,18 @@
     },
     {
       "name": "Ross MacDonald",
-      "premium_mtd": 0,
-      "items_mtd": 2031,
+      "premium_mtd": 20988.39,
+      "items_mtd": 20,
+      "vc_mtd": 7,
+      "vc_goal": 20,
+      "quotes_mtd": 71,
+      "quotes_goal": 80,
+      "premium_goal": 0
+    },
+    {
+      "name": "Sara Ross",
+      "premium_mtd": 720.09,
+      "items_mtd": 6,
       "vc_mtd": 14,
       "vc_goal": 20,
       "quotes_mtd": 97,
@@ -62,19 +72,9 @@
       "premium_goal": 0
     },
     {
-      "name": "Sara Ross",
-      "premium_mtd": 0,
-      "items_mtd": 69,
-      "vc_mtd": 1,
-      "vc_goal": 20,
-      "quotes_mtd": 18,
-      "quotes_goal": 80,
-      "premium_goal": 0
-    },
-    {
       "name": "Sujan Sharma",
-      "premium_mtd": 0,
-      "items_mtd": 3555,
+      "premium_mtd": 47050.79,
+      "items_mtd": 35,
       "vc_mtd": 24,
       "vc_goal": 20,
       "quotes_mtd": 62,
@@ -83,8 +83,8 @@
     },
     {
       "name": "Tiffany Keutz",
-      "premium_mtd": 0,
-      "items_mtd": 12,
+      "premium_mtd": 7390.75,
+      "items_mtd": 1,
       "vc_mtd": 1,
       "vc_goal": 20,
       "quotes_mtd": 0,
