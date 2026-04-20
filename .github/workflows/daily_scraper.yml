@@ -1,0 +1,44 @@
+name: Daily Performology Data Pull
+
+on:
+  schedule:
+    # 6:00 AM MDT = 12:00 UTC (MDT is UTC-6)
+    - cron: '0 12 * * *'
+  workflow_dispatch:
+    # Allow manual trigger from GitHub Actions UI
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install playwright requests
+          playwright install chromium
+          playwright install-deps chromium
+
+      - name: Run Performology scraper
+        env:
+          PERFORMOLOGY_EMAIL: ${{ secrets.PERFORMOLOGY_EMAIL }}
+          PERFORMOLOGY_PASSWORD: ${{ secrets.PERFORMOLOGY_PASSWORD }}
+        run: python scraper.py
+
+      - name: Commit and push data.json
+        run: |
+          git config user.name "BE Tools Bot"
+          git config user.email "betools@beinsuredco.com"
+          git add data.json
+          git diff --staged --quiet || git commit -m "Auto-update: Performology data $(date '+%Y-%m-%d %H:%M')"
+          git push
