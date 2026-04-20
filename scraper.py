@@ -210,7 +210,7 @@ async def scrape():
                 staff_data[sid]["vc_goal"]       = vc_goal
                 staff_data[sid]["quotes_mtd"]    = quotes_current
                 staff_data[sid]["quotes_goal"]   = quotes_goal
-                staff_data[sid]["premium_goal"]  = prem_goal
+                # premium_goal is hardcoded to 25000 per person (set in Pass 1)
                 print(f"    VC: {vc_current}/{vc_goal} | Quotes: {quotes_current}/{quotes_goal}")
             except Exception as e:
                 print(f"    Error: {e}")
