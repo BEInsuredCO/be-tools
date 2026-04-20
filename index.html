@@ -492,7 +492,7 @@
             <div class="promo-bar-track"><div class="promo-bar-fill" id="promo-bar-early" style="width:0%"></div></div>
             <span class="promo-count" id="promo-count-early">— / 126</span>
           </div>
-          <div class="promo-deadline" id="promo-days-early">&#9889; Early deadline<span class="promo-need" id="promo-need-early">NEED —</span></div>
+          <div class="promo-deadline" id="promo-days-early"><span id="promo-days-early-text">⚡ Early deadline</span><span class="promo-need" id="promo-need-early">NEED —</span></div>
         </div>
         <div class="promo-card clickable" onclick="window.open('https://beinsuredco-vctracker.manus.space','_blank')">
           <div class="promo-card-header">
@@ -504,7 +504,7 @@
             <div class="promo-bar-track"><div class="promo-bar-fill pink" id="promo-bar-end" style="width:0%"></div></div>
             <span class="promo-count" id="promo-count-end">— / 126</span>
           </div>
-          <div class="promo-deadline red">Month-end deadline &mdash; <span id="promo-days-end"></span><span class="promo-need" id="promo-need-end">NEED —</span></div>
+          <div class="promo-deadline red"><span id="promo-days-end-text">Month-end deadline</span><span class="promo-need" id="promo-need-end">NEED —</span></div>
         </div>
         <div class="promo-placeholder">+ Additional monthly promo will appear here</div>
       </div>
@@ -776,10 +776,11 @@
   const endDate   = new Date(y, m, lastDay);
   const daysToEarly = Math.max(0, Math.round((earlyDate - today) / 86400000));
   const daysToEnd   = Math.max(0, Math.round((endDate   - today) / 86400000));
-  document.getElementById('promo-days-early').innerHTML =
-    '&#9889; Early deadline &mdash; ' + daysToEarly + ' day' + (daysToEarly !== 1 ? 's' : '') + ' left';
-  const daysEndEl = document.getElementById('promo-days-end');
-  if (daysEndEl) daysEndEl.textContent = daysToEnd + ' day' + (daysToEnd !== 1 ? 's' : '') + ' left';
+  // Update only the days-text spans, leaving the NEED badge spans untouched
+  document.getElementById('promo-days-early-text').textContent =
+    '⚡ Early deadline — ' + daysToEarly + ' day' + (daysToEarly !== 1 ? 's' : '') + ' left';
+  document.getElementById('promo-days-end-text').textContent =
+    'Month-end deadline — ' + daysToEnd + ' day' + (daysToEnd !== 1 ? 's' : '') + ' left';
 
   // ── Collapsible sections ──────────────────────────────────────────────────────
   function toggleSection(id) {
