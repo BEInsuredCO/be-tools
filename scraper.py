@@ -148,18 +148,13 @@ async def scrape():
                 await wait_for_user_change(page, sid)
                 body_text = await page.inner_text("body")
 
-                # Extract premium
+                # Extract premium — innerText is "$172,768.08\nPREMIUM\n$271.5k", take first line
                 prem_el = await page.evaluate("document.getElementById('totalPremium')?.innerText || '0'")
-                premium = parse_number(prem_el)
+                premium = parse_number(prem_el.split('\n')[0].strip())
 
-                # Extract items from body text
-                items = 0
-                items_match = re.search(r'Total Items[^\d]*(\d+)', body_text)
-                if items_match:
-                    items = int(items_match.group(1))
-                else:
-                    items_el = await page.evaluate("document.getElementById('totalItems')?.innerText || document.getElementById('totalPolicies')?.innerText || '0'")
-                    items = int(parse_number(items_el))
+                # Extract items — innerText is "156\nITEMS\n245", take first line
+                items_el = await page.evaluate("document.getElementById('totalItems')?.innerText || '0'")
+                items = int(parse_number(items_el.split('\n')[0].strip()))
 
                 staff_data[sid] = {
                     "name": name,
