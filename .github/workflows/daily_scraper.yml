@@ -1,9 +1,23 @@
-name: Daily Performology Data Pull
+name: Hourly Performology Data Pull
 
 on:
   schedule:
-    # 6:00 AM MDT = 12:00 UTC (MDT is UTC-6)
-    - cron: '0 12 * * *'
+    # Every hour 7am-7pm MDT (MDT = UTC-6), Mon-Fri
+    # 7am MDT  = 13:00 UTC
+    # 8am MDT  = 14:00 UTC
+    # 9am MDT  = 15:00 UTC
+    # 10am MDT = 16:00 UTC
+    # 11am MDT = 17:00 UTC
+    # 12pm MDT = 18:00 UTC
+    # 1pm MDT  = 19:00 UTC
+    # 2pm MDT  = 20:00 UTC
+    # 3pm MDT  = 21:00 UTC
+    # 4pm MDT  = 22:00 UTC
+    # 5pm MDT  = 23:00 UTC
+    # 6pm MDT  = 00:00 UTC (next day)
+    # 7pm MDT  = 01:00 UTC (next day)
+    - cron: '0 13-23 * * 1-5'
+    - cron: '0 0,1 * * 2-6'
   workflow_dispatch:
     # Allow manual trigger from GitHub Actions UI
 
