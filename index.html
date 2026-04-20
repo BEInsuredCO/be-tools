@@ -329,6 +329,9 @@
 
   .promo-count { font-size: 10px; font-weight: 700; color: #1a2340; white-space: nowrap; }
   .promo-deadline     { font-size: 9px; color: #f7971e; font-weight: 600; margin-top: 3px; }
+  .promo-need         { font-size: 10px; color: #fff; font-weight: 700; background: rgba(0,0,0,0.18); border-radius: 6px; padding: 2px 7px; margin-top: 4px; display: inline-block; }
+  .promo-card.clickable { cursor: pointer; transition: transform 0.15s, box-shadow 0.15s; }
+  .promo-card.clickable:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.18); }
   .promo-deadline.red { color: #f5576c; }
 
   .promo-placeholder {
@@ -479,7 +482,7 @@
     </div>
     <div class="section-body" id="body-promo">
       <div class="promo-cards">
-        <div class="promo-card">
+        <div class="promo-card clickable" onclick="window.open('https://beinsuredco-vctracker.manus.space','_blank')">
           <div class="promo-card-header">
             <span class="promo-card-label">Team VC Goal</span>
             <span class="promo-card-reward">$6,000</span>
@@ -490,8 +493,9 @@
             <span class="promo-count" id="promo-count-early">— / 126</span>
           </div>
           <div class="promo-deadline" id="promo-days-early">&#9889; Early deadline</div>
+          <div class="promo-need" id="promo-need-early">NEED —</div>
         </div>
-        <div class="promo-card">
+        <div class="promo-card clickable" onclick="window.open('https://beinsuredco-vctracker.manus.space','_blank')">
           <div class="promo-card-header">
             <span class="promo-card-label">Team VC Goal</span>
             <span class="promo-card-reward">$2,500</span>
@@ -501,7 +505,8 @@
             <div class="promo-bar-track"><div class="promo-bar-fill pink" id="promo-bar-end" style="width:0%"></div></div>
             <span class="promo-count" id="promo-count-end">— / 126</span>
           </div>
-          <div class="promo-deadline red">Month-end deadline</div>
+          <div class="promo-deadline red">Month-end deadline &mdash; <span id="promo-days-end"></span></div>
+          <div class="promo-need" id="promo-need-end">NEED —</div>
         </div>
         <div class="promo-placeholder">+ Additional monthly promo will appear here</div>
       </div>
@@ -718,11 +723,14 @@
     const current = tg.vc_current || 0;
     const goal    = 126; // promo goal is always 126
 
-    const pct = Math.min(Math.round((current / goal) * 100), 100);
+    const pct  = Math.min(Math.round((current / goal) * 100), 100);
+    const need  = Math.max(0, goal - current);
     document.getElementById('promo-bar-early').style.width = pct + '%';
     document.getElementById('promo-bar-end').style.width   = pct + '%';
     document.getElementById('promo-count-early').textContent = current + ' / ' + goal;
     document.getElementById('promo-count-end').textContent   = current + ' / ' + goal;
+    document.getElementById('promo-need-early').textContent  = need > 0 ? 'NEED ' + need : '\u2713 GOAL MET!';
+    document.getElementById('promo-need-end').textContent    = need > 0 ? 'NEED ' + need : '\u2713 GOAL MET!';
   }
 
   // ── Theme CSS variables ───────────────────────────────────────────────────────
@@ -772,6 +780,8 @@
   const daysToEnd   = Math.max(0, Math.round((endDate   - today) / 86400000));
   document.getElementById('promo-days-early').innerHTML =
     '&#9889; Early deadline &mdash; ' + daysToEarly + ' day' + (daysToEarly !== 1 ? 's' : '') + ' left';
+  const daysEndEl = document.getElementById('promo-days-end');
+  if (daysEndEl) daysEndEl.textContent = daysToEnd + ' day' + (daysToEnd !== 1 ? 's' : '') + ' left';
 
   // ── Collapsible sections ──────────────────────────────────────────────────────
   function toggleSection(id) {
