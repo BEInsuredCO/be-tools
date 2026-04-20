@@ -426,6 +426,17 @@
     <div class="agent-name" id="agent-name-display">Select Agency &amp; Staff</div>
   </div>
 
+  <!-- ═══ LOCKED OVERLAY ═══ -->
+  <div id="locked-overlay" style="display:none;flex-direction:column;align-items:center;justify-content:center;padding:40px 20px;text-align:center;flex:1;">
+    <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="#1565c0" stroke-width="1.5" style="margin-bottom:16px;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+    <p style="font-size:13px;font-weight:700;color:#1a2340;margin-bottom:6px;">Agency Login Required</p>
+    <p style="font-size:11px;color:#666;margin-bottom:20px;">Please log in with your agency credentials to access BE Tools.</p>
+    <button class="btn-primary" style="padding:10px 28px;font-size:13px;" onclick="openModal('modal-agency')">Login</button>
+  </div>
+
+  <!-- ═══ MAIN CONTENT (hidden until login) ═══ -->
+  <div id="main-content">
+
   <!-- ═══ PERFORMANCE MTD ═══ -->
   <div class="section">
     <div class="section-header" onclick="toggleSection('perf')">
@@ -559,6 +570,8 @@
     </div>
   </div>
 
+  </div><!-- end #main-content -->
+
   <!-- ═══ FOOTER ═══ -->
   <div class="footer">
     <span class="footer-logo">BE TOOLS</span>
@@ -566,17 +579,18 @@
   </div>
 </div>
 
-<!-- ═══ MODAL: AGENCY ═══ -->
+<!-- ═══ MODAL: AGENCY LOGIN ═══ -->
 <div class="modal-overlay" id="modal-agency">
   <div class="modal">
-    <h3>&#127970; Agency Setup</h3>
+    <h3>&#127970; Agency Login</h3>
+    <p style="font-size:11px;color:#666;margin-bottom:12px;">Enter your agency credentials to access BE Tools.</p>
     <label>Agent Number</label>
-    <input type="text" id="input-agent-num" placeholder="e.g. 123456789" />
+    <input type="text" id="input-agent-num" placeholder="Agent number" autocomplete="username" />
     <label>Password</label>
-    <input type="password" id="input-agent-pass" placeholder="Create a password" />
+    <input type="password" id="input-agent-pass" placeholder="Password" autocomplete="current-password" />
+    <p id="agency-error" style="color:#f5576c;font-size:10px;margin-top:-8px;margin-bottom:10px;display:none;">Incorrect credentials. Please try again.</p>
     <div class="modal-btn-row">
-      <button class="btn-secondary" onclick="closeModal('modal-agency')">Cancel</button>
-      <button class="btn-primary" onclick="saveAgency()">Save Agency</button>
+      <button class="btn-primary" style="width:100%" onclick="saveAgency()">Login</button>
     </div>
   </div>
 </div>
@@ -796,15 +810,37 @@
     o.addEventListener('click', e => { if (e.target === o) o.classList.remove('active'); });
   });
 
-  // ── Agency ────────────────────────────────────────────────────────────────────
+  // ── Agency Login ─────────────────────────────────────────────────────────────
+  const AGENCY_NUM  = 'a0c3772';
+  const AGENCY_PASS = 'G00dHands!';
+
   function saveAgency() {
     const num  = document.getElementById('input-agent-num').value.trim();
     const pass = document.getElementById('input-agent-pass').value.trim();
-    if (!num || !pass) { alert('Please fill in both fields.'); return; }
-    localStorage.setItem('be_agent_num',  num);
-    localStorage.setItem('be_agent_pass', btoa(pass));
+    const err  = document.getElementById('agency-error');
+    if (!num || !pass) { err.textContent = 'Please fill in both fields.'; err.style.display = 'block'; return; }
+    if (num !== AGENCY_NUM || pass !== AGENCY_PASS) {
+      err.textContent = 'Incorrect credentials. Please try again.';
+      err.style.display = 'block';
+      document.getElementById('input-agent-pass').value = '';
+      return;
+    }
+    err.style.display = 'none';
+    localStorage.setItem('be_authenticated', '1');
+    localStorage.setItem('be_agent_num', num);
     closeModal('modal-agency');
+    unlockContent();
     updateNameDisplay();
+  }
+
+  function unlockContent() {
+    document.getElementById('locked-overlay').style.display = 'none';
+    document.getElementById('main-content').style.display   = 'block';
+  }
+
+  function lockContent() {
+    document.getElementById('locked-overlay').style.display = 'flex';
+    document.getElementById('main-content').style.display   = 'none';
   }
 
   // ── Staff ─────────────────────────────────────────────────────────────────────
@@ -839,14 +875,21 @@
 
   // ── Init: restore saved preferences + load live data ─────────────────────────
   (function init() {
-    updateNameDisplay();
     const savedTheme = localStorage.getItem('be_theme');
     if (savedTheme !== null) {
       const swatch = document.querySelector('[data-theme="' + savedTheme + '"]');
       if (swatch) { swatch.classList.add('selected'); applyTheme(parseInt(savedTheme)); }
     }
-    // Load live Performology data
-    loadData();
+    // Check authentication
+    if (localStorage.getItem('be_authenticated') === '1') {
+      unlockContent();
+      updateNameDisplay();
+      loadData();
+    } else {
+      lockContent();
+      // Auto-open login modal on first visit
+      setTimeout(() => openModal('modal-agency'), 400);
+    }
   })();
 </script>
 </body>
