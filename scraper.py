@@ -115,17 +115,25 @@ async def scrape():
         # ── Login ──────────────────────────────────────────────────────────────
         print("Logging in to Performology...")
         await page.goto(f"{PERFORMOLOGY_URL}/", wait_until="networkidle")
+        await page.wait_for_timeout(2000)
         try:
-            email_field = page.locator('input[type="email"], input[name="email"], #email').first
-            await email_field.fill(LOGIN_EMAIL)
-            pwd_field = page.locator('input[type="password"], input[name="password"], #password').first
-            await pwd_field.fill(LOGIN_PASSWORD)
-            submit = page.locator('button[type="submit"], input[type="submit"], button:has-text("Login"), button:has-text("Sign In")').first
-            await submit.click()
-            await page.wait_for_url("**/Reports/**", timeout=15000)
+            # Performology uses id="Email" (type=text) and id="Password"
+            await page.fill('#Email', LOGIN_EMAIL)
+            await page.fill('#Password', LOGIN_PASSWORD)
+            await page.click('#loginBtn')
+            await page.wait_for_url("**/Reports/**", timeout=20000)
             print("  Login successful.")
         except Exception as e:
             print(f"  Login error: {e}")
+            # Try fallback selectors
+            try:
+                await page.fill('input[placeholder="Email"]', LOGIN_EMAIL)
+                await page.fill('input[placeholder="Password"]', LOGIN_PASSWORD)
+                await page.click('button:has-text("Login")')
+                await page.wait_for_url("**/Reports/**", timeout=20000)
+                print("  Login successful (fallback).")
+            except Exception as e2:
+                print(f"  Login fallback error: {e2}")
 
         # ── PASS 1: Sales data for each staff member ───────────────────────────
         print("\nPass 1: Sales data...")
