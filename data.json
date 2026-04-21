@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-04-21 20:14",
+  "updated_at": "2026-04-21 23:10",
   "staff": [
     {
       "name": "Amado Plata",
-      "premium_mtd": 14943.51,
-      "items_mtd": 19,
+      "premium_mtd": 17214.45,
+      "items_mtd": 20,
       "items_goal": 25,
-      "vc_mtd": 18,
+      "vc_mtd": 19,
       "vc_goal": 30,
-      "quotes_mtd": 59,
+      "quotes_mtd": 60,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -26,18 +26,7 @@
     {
       "name": "Jackie Schmidt",
       "premium_mtd": 38494.53,
-      "items_mtd": 45,
-      "items_goal": 25,
-      "vc_mtd": 0,
-      "vc_goal": 4500,
-      "quotes_mtd": 0,
-      "quotes_goal": 80,
-      "premium_goal": 25000
-    },
-    {
-      "name": "Jacqulyn Alcala-Casica",
-      "premium_mtd": 4383.1,
-      "items_mtd": 12,
+      "items_mtd": 48,
       "items_goal": 25,
       "vc_mtd": 30,
       "vc_goal": 20,
@@ -46,24 +35,35 @@
       "premium_goal": 25000
     },
     {
-      "name": "Noel Elhardt",
-      "premium_mtd": 40265.16,
-      "items_mtd": 22,
+      "name": "Jacqulyn Alcala-Casica",
+      "premium_mtd": 4383.1,
+      "items_mtd": 12,
       "items_goal": 25,
-      "vc_mtd": 0,
-      "vc_goal": 4500,
-      "quotes_mtd": 0,
+      "vc_mtd": 3,
+      "vc_goal": 20,
+      "quotes_mtd": 29,
+      "quotes_goal": 80,
+      "premium_goal": 25000
+    },
+    {
+      "name": "Noel Elhardt",
+      "premium_mtd": 40699.66,
+      "items_mtd": 25,
+      "items_goal": 25,
+      "vc_mtd": 8,
+      "vc_goal": 30,
+      "quotes_mtd": 84,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
     {
       "name": "Ross MacDonald",
-      "premium_mtd": 20988.39,
-      "items_mtd": 20,
+      "premium_mtd": 21470.37,
+      "items_mtd": 21,
       "items_goal": 25,
-      "vc_mtd": 7,
+      "vc_mtd": 15,
       "vc_goal": 30,
-      "quotes_mtd": 83,
+      "quotes_mtd": 108,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -102,9 +102,9 @@
     }
   ],
   "team_goals": {
-    "vc_current": 99,
+    "vc_current": 102,
     "vc_goal": 126,
-    "premium_current": 115754.0,
+    "premium_current": 118674.0,
     "premium_goal": 150000.0
   }
 }
