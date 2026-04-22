@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-22 06:26",
+  "updated_at": "2026-04-22 16:41",
   "staff": [
     {
       "name": "Amado Plata",
@@ -8,7 +8,7 @@
       "items_goal": 25,
       "vc_mtd": 19,
       "vc_goal": 30,
-      "quotes_mtd": 60,
+      "quotes_mtd": 62,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -18,7 +18,7 @@
       "items_mtd": 0,
       "items_goal": 25,
       "vc_mtd": 0,
-      "vc_goal": 30,
+      "vc_goal": 4500,
       "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
@@ -28,9 +28,9 @@
       "premium_mtd": 38494.53,
       "items_mtd": 48,
       "items_goal": 25,
-      "vc_mtd": 30,
-      "vc_goal": 20,
-      "quotes_mtd": 51,
+      "vc_mtd": 0,
+      "vc_goal": 30,
+      "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -41,18 +41,18 @@
       "items_goal": 25,
       "vc_mtd": 3,
       "vc_goal": 20,
-      "quotes_mtd": 29,
+      "quotes_mtd": 30,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
     {
       "name": "Noel Elhardt",
       "premium_mtd": 40699.66,
-      "items_mtd": 25,
+      "items_mtd": 26,
       "items_goal": 25,
       "vc_mtd": 8,
       "vc_goal": 30,
-      "quotes_mtd": 84,
+      "quotes_mtd": 89,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -63,7 +63,7 @@
       "items_goal": 25,
       "vc_mtd": 15,
       "vc_goal": 30,
-      "quotes_mtd": 108,
+      "quotes_mtd": 121,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -74,7 +74,7 @@
       "items_goal": 25,
       "vc_mtd": 2,
       "vc_goal": 20,
-      "quotes_mtd": 21,
+      "quotes_mtd": 22,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -83,9 +83,9 @@
       "premium_mtd": 47050.79,
       "items_mtd": 35,
       "items_goal": 25,
-      "vc_mtd": 24,
+      "vc_mtd": 2,
       "vc_goal": 20,
-      "quotes_mtd": 65,
+      "quotes_mtd": 22,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -94,9 +94,9 @@
       "premium_mtd": 7390.75,
       "items_mtd": 1,
       "items_goal": 25,
-      "vc_mtd": 1,
+      "vc_mtd": 24,
       "vc_goal": 20,
-      "quotes_mtd": 0,
+      "quotes_mtd": 66,
       "quotes_goal": 80,
       "premium_goal": 25000
     }
