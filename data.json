@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-04-22 20:16",
+  "updated_at": "2026-04-22 23:36",
   "staff": [
     {
       "name": "Amado Plata",
       "premium_mtd": 17214.45,
       "items_mtd": 20,
       "items_goal": 25,
-      "vc_mtd": 0,
-      "vc_goal": 4500,
-      "quotes_mtd": 0,
+      "vc_mtd": 19,
+      "vc_goal": 30,
+      "quotes_mtd": 62,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -39,9 +39,9 @@
       "premium_mtd": 4383.1,
       "items_mtd": 12,
       "items_goal": 25,
-      "vc_mtd": 0,
-      "vc_goal": 4500,
-      "quotes_mtd": 0,
+      "vc_mtd": 3,
+      "vc_goal": 20,
+      "quotes_mtd": 30,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -50,16 +50,16 @@
       "premium_mtd": 40699.66,
       "items_mtd": 26,
       "items_goal": 25,
-      "vc_mtd": 3,
-      "vc_goal": 20,
-      "quotes_mtd": 30,
+      "vc_mtd": 8,
+      "vc_goal": 30,
+      "quotes_mtd": 89,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
     {
       "name": "Ross MacDonald",
       "premium_mtd": 21470.37,
-      "items_mtd": 21,
+      "items_mtd": 23,
       "items_goal": 25,
       "vc_mtd": 15,
       "vc_goal": 30,
