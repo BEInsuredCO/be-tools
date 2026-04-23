@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-04-23 17:57",
+  "updated_at": "2026-04-23 21:09",
   "staff": [
     {
       "name": "Amado Plata",
       "premium_mtd": 17214.45,
-      "items_mtd": 20,
+      "items_mtd": 21,
       "items_goal": 25,
-      "vc_mtd": 19,
+      "vc_mtd": 20,
       "vc_goal": 30,
-      "quotes_mtd": 72,
+      "quotes_mtd": 73,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -50,20 +50,20 @@
       "premium_mtd": 40699.66,
       "items_mtd": 26,
       "items_goal": 25,
-      "vc_mtd": 0,
-      "vc_goal": 4500,
-      "quotes_mtd": 0,
+      "vc_mtd": 8,
+      "vc_goal": 30,
+      "quotes_mtd": 90,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
     {
       "name": "Ross MacDonald",
-      "premium_mtd": 21470.37,
-      "items_mtd": 23,
+      "premium_mtd": 23363.13,
+      "items_mtd": 24,
       "items_goal": 25,
-      "vc_mtd": 8,
+      "vc_mtd": 16,
       "vc_goal": 30,
-      "quotes_mtd": 90,
+      "quotes_mtd": 131,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -80,10 +80,10 @@
     },
     {
       "name": "Sujan Sharma",
-      "premium_mtd": 47050.79,
-      "items_mtd": 35,
+      "premium_mtd": 47143.79,
+      "items_mtd": 36,
       "items_goal": 25,
-      "vc_mtd": 24,
+      "vc_mtd": 25,
       "vc_goal": 20,
       "quotes_mtd": 69,
       "quotes_goal": 80,
@@ -102,9 +102,9 @@
     }
   ],
   "team_goals": {
-    "vc_current": 104,
+    "vc_current": 107,
     "vc_goal": 126,
-    "premium_current": 121768.0,
+    "premium_current": 123754.0,
     "premium_goal": 150000.0
   }
 }
