@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-23 06:30",
+  "updated_at": "2026-04-23 17:57",
   "staff": [
     {
       "name": "Amado Plata",
@@ -8,7 +8,7 @@
       "items_goal": 25,
       "vc_mtd": 19,
       "vc_goal": 30,
-      "quotes_mtd": 62,
+      "quotes_mtd": 72,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -25,23 +25,23 @@
     },
     {
       "name": "Jackie Schmidt",
-      "premium_mtd": 38494.53,
-      "items_mtd": 48,
+      "premium_mtd": 40823.51,
+      "items_mtd": 49,
       "items_goal": 25,
-      "vc_mtd": 0,
-      "vc_goal": 4500,
-      "quotes_mtd": 0,
+      "vc_mtd": 31,
+      "vc_goal": 20,
+      "quotes_mtd": 64,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
     {
       "name": "Jacqulyn Alcala-Casica",
       "premium_mtd": 4383.1,
-      "items_mtd": 12,
+      "items_mtd": 15,
       "items_goal": 25,
-      "vc_mtd": 30,
+      "vc_mtd": 3,
       "vc_goal": 20,
-      "quotes_mtd": 56,
+      "quotes_mtd": 35,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -50,9 +50,9 @@
       "premium_mtd": 40699.66,
       "items_mtd": 26,
       "items_goal": 25,
-      "vc_mtd": 8,
-      "vc_goal": 30,
-      "quotes_mtd": 89,
+      "vc_mtd": 0,
+      "vc_goal": 4500,
+      "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -61,9 +61,9 @@
       "premium_mtd": 21470.37,
       "items_mtd": 23,
       "items_goal": 25,
-      "vc_mtd": 15,
+      "vc_mtd": 8,
       "vc_goal": 30,
-      "quotes_mtd": 121,
+      "quotes_mtd": 90,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -85,7 +85,7 @@
       "items_goal": 25,
       "vc_mtd": 24,
       "vc_goal": 20,
-      "quotes_mtd": 66,
+      "quotes_mtd": 69,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -102,9 +102,9 @@
     }
   ],
   "team_goals": {
-    "vc_current": 103,
+    "vc_current": 104,
     "vc_goal": 126,
-    "premium_current": 119439.0,
+    "premium_current": 121768.0,
     "premium_goal": 150000.0
   }
 }
