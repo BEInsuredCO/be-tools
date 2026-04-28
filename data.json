@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-04-28 07:59",
+  "updated_at": "2026-04-28 18:11",
   "staff": [
     {
       "name": "Amado Plata",
-      "premium_mtd": 26105.66,
-      "items_mtd": 28,
+      "premium_mtd": 29036.6,
+      "items_mtd": 30,
       "items_goal": 25,
-      "vc_mtd": 26,
+      "vc_mtd": 28,
       "vc_goal": 30,
-      "quotes_mtd": 79,
+      "quotes_mtd": 86,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -17,19 +17,19 @@
       "premium_mtd": 0.0,
       "items_mtd": 0,
       "items_goal": 25,
-      "vc_mtd": 0,
+      "vc_mtd": 28,
       "vc_goal": 30,
-      "quotes_mtd": 0,
+      "quotes_mtd": 86,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
     {
       "name": "Jackie Schmidt",
       "premium_mtd": 40823.51,
-      "items_mtd": 52,
+      "items_mtd": 55,
       "items_goal": 25,
       "vc_mtd": 0,
-      "vc_goal": 4500,
+      "vc_goal": 30,
       "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
@@ -39,9 +39,9 @@
       "premium_mtd": 4383.1,
       "items_mtd": 15,
       "items_goal": 25,
-      "vc_mtd": 31,
+      "vc_mtd": 3,
       "vc_goal": 20,
-      "quotes_mtd": 65,
+      "quotes_mtd": 44,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -52,7 +52,7 @@
       "items_goal": 25,
       "vc_mtd": 8,
       "vc_goal": 30,
-      "quotes_mtd": 91,
+      "quotes_mtd": 101,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -61,9 +61,9 @@
       "premium_mtd": 23363.13,
       "items_mtd": 31,
       "items_goal": 25,
-      "vc_mtd": 8,
+      "vc_mtd": 16,
       "vc_goal": 30,
-      "quotes_mtd": 91,
+      "quotes_mtd": 148,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -72,20 +72,20 @@
       "premium_mtd": 4961.3,
       "items_mtd": 14,
       "items_goal": 25,
-      "vc_mtd": 16,
-      "vc_goal": 30,
-      "quotes_mtd": 142,
+      "vc_mtd": 3,
+      "vc_goal": 20,
+      "quotes_mtd": 27,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
     {
       "name": "Sujan Sharma",
-      "premium_mtd": 59311.79,
-      "items_mtd": 44,
+      "premium_mtd": 61977.79,
+      "items_mtd": 45,
       "items_goal": 25,
-      "vc_mtd": 30,
+      "vc_mtd": 31,
       "vc_goal": 20,
-      "quotes_mtd": 81,
+      "quotes_mtd": 83,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -94,17 +94,17 @@
       "premium_mtd": 7390.75,
       "items_mtd": 1,
       "items_goal": 25,
-      "vc_mtd": 1,
+      "vc_mtd": 31,
       "vc_goal": 20,
-      "quotes_mtd": 0,
+      "quotes_mtd": 83,
       "quotes_goal": 80,
       "premium_goal": 25000
     }
   ],
   "team_goals": {
-    "vc_current": 118,
+    "vc_current": 121,
     "vc_goal": 126,
-    "premium_current": 143081.0,
+    "premium_current": 148678.0,
     "premium_goal": 150000.0
   }
 }
