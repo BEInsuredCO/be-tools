@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-29 18:05",
+  "updated_at": "2026-04-29 22:15",
   "staff": [
     {
       "name": "Amado Plata",
@@ -18,7 +18,7 @@
       "items_mtd": 0,
       "items_goal": 25,
       "vc_mtd": 0,
-      "vc_goal": 4500,
+      "vc_goal": 30,
       "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
@@ -28,9 +28,9 @@
       "premium_mtd": 44185.61,
       "items_mtd": 59,
       "items_goal": 25,
-      "vc_mtd": 0,
-      "vc_goal": 30,
-      "quotes_mtd": 0,
+      "vc_mtd": 34,
+      "vc_goal": 20,
+      "quotes_mtd": 74,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -39,9 +39,9 @@
       "premium_mtd": 4383.1,
       "items_mtd": 15,
       "items_goal": 25,
-      "vc_mtd": 0,
-      "vc_goal": 4500,
-      "quotes_mtd": 0,
+      "vc_mtd": 3,
+      "vc_goal": 20,
+      "quotes_mtd": 46,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -50,20 +50,20 @@
       "premium_mtd": 42767.09,
       "items_mtd": 29,
       "items_goal": 25,
-      "vc_mtd": 3,
-      "vc_goal": 20,
-      "quotes_mtd": 46,
+      "vc_mtd": 0,
+      "vc_goal": 4500,
+      "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
     {
       "name": "Ross MacDonald",
-      "premium_mtd": 29372.84,
-      "items_mtd": 37,
+      "premium_mtd": 31841.03,
+      "items_mtd": 41,
       "items_goal": 25,
-      "vc_mtd": 0,
-      "vc_goal": 4500,
-      "quotes_mtd": 0,
+      "vc_mtd": 9,
+      "vc_goal": 30,
+      "quotes_mtd": 100,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -72,9 +72,9 @@
       "premium_mtd": 4961.3,
       "items_mtd": 14,
       "items_goal": 25,
-      "vc_mtd": 20,
-      "vc_goal": 30,
-      "quotes_mtd": 160,
+      "vc_mtd": 3,
+      "vc_goal": 20,
+      "quotes_mtd": 32,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -102,9 +102,9 @@
     }
   ],
   "team_goals": {
-    "vc_current": 132,
+    "vc_current": 135,
     "vc_goal": 126,
-    "premium_current": 164512.0,
+    "premium_current": 166980.0,
     "premium_goal": 150000.0
   }
 }
