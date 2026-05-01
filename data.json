@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-05-01 20:14",
+  "updated_at": "2026-05-01 23:40",
   "staff": [
     {
       "name": "Amado Plata",
       "premium_mtd": 1352.18,
       "items_mtd": 4,
       "items_goal": 25,
-      "vc_mtd": 0,
-      "vc_goal": 20,
-      "quotes_mtd": 0,
+      "vc_mtd": 3,
+      "vc_goal": 30,
+      "quotes_mtd": 2,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -17,9 +17,9 @@
       "premium_mtd": 0.0,
       "items_mtd": 0,
       "items_goal": 25,
-      "vc_mtd": 3,
+      "vc_mtd": 0,
       "vc_goal": 30,
-      "quotes_mtd": 2,
+      "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -80,21 +80,21 @@
     },
     {
       "name": "Sujan Sharma",
-      "premium_mtd": 0.0,
-      "items_mtd": 0,
+      "premium_mtd": 2516.0,
+      "items_mtd": 3,
       "items_goal": 25,
-      "vc_mtd": 0,
+      "vc_mtd": 2,
       "vc_goal": 20,
-      "quotes_mtd": 0,
+      "quotes_mtd": 2,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
     {
       "name": "Tiffany Keutz",
-      "premium_mtd": 0.0,
-      "items_mtd": 0,
+      "premium_mtd": 3169.0,
+      "items_mtd": 4,
       "items_goal": 25,
-      "vc_mtd": 0,
+      "vc_mtd": 3,
       "vc_goal": 20,
       "quotes_mtd": 0,
       "quotes_goal": 80,
@@ -102,9 +102,9 @@
     }
   ],
   "team_goals": {
-    "vc_current": 5,
+    "vc_current": 10,
     "vc_goal": 126,
-    "premium_current": 7564.0,
+    "premium_current": 13249.0,
     "premium_goal": 150000.0
   }
 }
