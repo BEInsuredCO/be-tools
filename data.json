@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-05-01 16:17",
+  "updated_at": "2026-05-01 20:14",
   "staff": [
     {
       "name": "Amado Plata",
-      "premium_mtd": 0.0,
-      "items_mtd": 0,
+      "premium_mtd": 1352.18,
+      "items_mtd": 4,
       "items_goal": 25,
       "vc_mtd": 0,
-      "vc_goal": 30,
+      "vc_goal": 20,
       "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
@@ -17,20 +17,20 @@
       "premium_mtd": 0.0,
       "items_mtd": 0,
       "items_goal": 25,
-      "vc_mtd": 0,
+      "vc_mtd": 3,
       "vc_goal": 30,
-      "quotes_mtd": 0,
+      "quotes_mtd": 2,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
     {
       "name": "Jackie Schmidt",
-      "premium_mtd": 0.0,
-      "items_mtd": 0,
+      "premium_mtd": 5533.82,
+      "items_mtd": 1,
       "items_goal": 25,
-      "vc_mtd": 0,
+      "vc_mtd": 1,
       "vc_goal": 20,
-      "quotes_mtd": 0,
+      "quotes_mtd": 1,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -69,11 +69,11 @@
     },
     {
       "name": "Sara Ross",
-      "premium_mtd": 0.0,
-      "items_mtd": 1,
+      "premium_mtd": 677.72,
+      "items_mtd": 3,
       "items_goal": 25,
-      "vc_mtd": 0,
-      "vc_goal": 30,
+      "vc_mtd": 1,
+      "vc_goal": 20,
       "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
@@ -95,16 +95,16 @@
       "items_mtd": 0,
       "items_goal": 25,
       "vc_mtd": 0,
-      "vc_goal": 4500,
+      "vc_goal": 20,
       "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
     }
   ],
   "team_goals": {
-    "vc_current": 0,
+    "vc_current": 5,
     "vc_goal": 126,
-    "premium_current": 0.0,
+    "premium_current": 7564.0,
     "premium_goal": 150000.0
   }
 }
