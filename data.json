@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-02 06:33",
+  "updated_at": "2026-05-04 18:07",
   "staff": [
     {
       "name": "Amado Plata",
@@ -8,7 +8,7 @@
       "items_goal": 25,
       "vc_mtd": 3,
       "vc_goal": 30,
-      "quotes_mtd": 2,
+      "quotes_mtd": 5,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -25,12 +25,12 @@
     },
     {
       "name": "Jackie Schmidt",
-      "premium_mtd": 5533.82,
-      "items_mtd": 1,
+      "premium_mtd": 8498.78,
+      "items_mtd": 3,
       "items_goal": 25,
-      "vc_mtd": 1,
+      "vc_mtd": 3,
       "vc_goal": 20,
-      "quotes_mtd": 1,
+      "quotes_mtd": 2,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -52,7 +52,7 @@
       "items_goal": 25,
       "vc_mtd": 0,
       "vc_goal": 30,
-      "quotes_mtd": 0,
+      "quotes_mtd": 1,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -63,7 +63,7 @@
       "items_goal": 25,
       "vc_mtd": 0,
       "vc_goal": 30,
-      "quotes_mtd": 0,
+      "quotes_mtd": 11,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -74,18 +74,18 @@
       "items_goal": 25,
       "vc_mtd": 1,
       "vc_goal": 20,
-      "quotes_mtd": 0,
+      "quotes_mtd": 1,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
     {
       "name": "Sujan Sharma",
-      "premium_mtd": 2516.0,
-      "items_mtd": 3,
+      "premium_mtd": 7688.0,
+      "items_mtd": 7,
       "items_goal": 25,
-      "vc_mtd": 2,
+      "vc_mtd": 5,
       "vc_goal": 20,
-      "quotes_mtd": 2,
+      "quotes_mtd": 8,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -102,9 +102,9 @@
     }
   ],
   "team_goals": {
-    "vc_current": 10,
+    "vc_current": 15,
     "vc_goal": 126,
-    "premium_current": 13249.0,
+    "premium_current": 21386.0,
     "premium_goal": 150000.0
   }
 }
