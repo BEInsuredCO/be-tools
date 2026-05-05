@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-05 07:34",
+  "updated_at": "2026-05-05 18:04",
   "staff": [
     {
       "name": "Amado Plata",
@@ -8,7 +8,7 @@
       "items_goal": 25,
       "vc_mtd": 6,
       "vc_goal": 30,
-      "quotes_mtd": 6,
+      "quotes_mtd": 8,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -37,7 +37,7 @@
     {
       "name": "Jacqulyn Alcala-Casica",
       "premium_mtd": 0.0,
-      "items_mtd": 0,
+      "items_mtd": 1,
       "items_goal": 25,
       "vc_mtd": 0,
       "vc_goal": 20,
@@ -52,7 +52,7 @@
       "items_goal": 25,
       "vc_mtd": 0,
       "vc_goal": 30,
-      "quotes_mtd": 1,
+      "quotes_mtd": 11,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -63,7 +63,7 @@
       "items_goal": 25,
       "vc_mtd": 0,
       "vc_goal": 30,
-      "quotes_mtd": 11,
+      "quotes_mtd": 23,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -74,18 +74,18 @@
       "items_goal": 25,
       "vc_mtd": 1,
       "vc_goal": 20,
-      "quotes_mtd": 1,
+      "quotes_mtd": 5,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
     {
       "name": "Sujan Sharma",
-      "premium_mtd": 9970.0,
-      "items_mtd": 8,
+      "premium_mtd": 13709.0,
+      "items_mtd": 9,
       "items_goal": 25,
       "vc_mtd": 6,
       "vc_goal": 20,
-      "quotes_mtd": 8,
+      "quotes_mtd": 9,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
