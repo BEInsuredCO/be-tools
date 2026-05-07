@@ -112,6 +112,20 @@
     padding: 1px 0 2px;
   }
 
+  .stat-pace {
+    font-size: 8.5px;
+    color: #8a97b0;
+    font-weight: 500;
+    margin-top: 4px;
+    letter-spacing: 0.2px;
+  }
+  .stat-pace strong {
+    font-weight: 700;
+    color: #1565c0;
+  }
+  .stat-pace.on-track strong { color: #27ae60; }
+  .stat-pace.behind strong  { color: #e74c3c; }
+
   .data-updated {
     font-size: 8px;
     color: #aab2c8;
@@ -458,6 +472,7 @@
             <span class="stat-goal" id="stat-premium-goal">/ —</span>
           </div>
           <div class="bar-track"><div class="bar-fill" id="bar-premium" style="width:0%"></div></div>
+          <div class="stat-pace" id="pace-premium">On pace: <strong>—</strong></div>
         </div>
         <div class="stat-card">
           <div class="stat-label">Items MTD</div>
@@ -466,6 +481,7 @@
             <span class="stat-goal" id="stat-items-goal">/ —</span>
           </div>
           <div class="bar-track"><div class="bar-fill green" id="bar-items" style="width:0%"></div></div>
+          <div class="stat-pace" id="pace-items">On pace: <strong>—</strong></div>
         </div>
         <div class="stat-card">
           <div class="stat-label">VC MTD</div>
@@ -474,6 +490,7 @@
             <span class="stat-goal" id="stat-vc-goal">/ —</span>
           </div>
           <div class="bar-track"><div class="bar-fill orange" id="bar-vc" style="width:0%"></div></div>
+          <div class="stat-pace" id="pace-vc">On pace: <strong>—</strong></div>
         </div>
         <div class="stat-card">
           <div class="stat-label">Quotes MTD</div>
@@ -482,6 +499,7 @@
             <span class="stat-goal" id="stat-quotes-goal">/ —</span>
           </div>
           <div class="bar-track"><div class="bar-fill purple" id="bar-quotes" style="width:0%"></div></div>
+          <div class="stat-pace" id="pace-quotes">On pace: <strong>—</strong></div>
         </div>
       </div>
       <div class="data-updated" id="data-updated-label"></div>
@@ -725,25 +743,47 @@
       return Math.min(Math.round((val / goal) * 100), 100);
     }
 
+    // On-pace calculation: (current / days elapsed) * total days in month
+    const today     = new Date();
+    const dayOfMonth = today.getDate();
+    const daysInMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0).getDate();
+    function onPace(val) {
+      if (!dayOfMonth || dayOfMonth === 0) return val;
+      return Math.round((val / dayOfMonth) * daysInMonth);
+    }
+    function setPace(elId, paceVal, goal, fmt) {
+      const el = document.getElementById(elId);
+      const display = fmt ? fmtPrem(paceVal) : paceVal;
+      el.innerHTML = 'On pace: <strong>' + display + '</strong>';
+      el.className = 'stat-pace ' + (goal && paceVal >= goal ? 'on-track' : 'behind');
+    }
+
+    // VC goal is always 30 per person
+    const vcGoal = 30;
+
     // Premium
     document.getElementById('stat-premium-val').textContent  = fmtPrem(s.premium_mtd);
     document.getElementById('stat-premium-goal').textContent = '/ ' + fmtPrem(s.premium_goal || 0);
     document.getElementById('bar-premium').style.width       = pct(s.premium_mtd, s.premium_goal) + '%';
+    setPace('pace-premium', onPace(s.premium_mtd), s.premium_goal, true);
 
     // Items
     document.getElementById('stat-items-val').textContent  = s.items_mtd;
     document.getElementById('stat-items-goal').textContent = '/ ' + (s.items_goal || '—');
     document.getElementById('bar-items').style.width       = pct(s.items_mtd, s.items_goal) + '%';
+    setPace('pace-items', onPace(s.items_mtd), s.items_goal, false);
 
-    // VC
+    // VC (always /30)
     document.getElementById('stat-vc-val').textContent  = s.vc_mtd;
-    document.getElementById('stat-vc-goal').textContent = '/ ' + (s.vc_goal || '—');
-    document.getElementById('bar-vc').style.width       = pct(s.vc_mtd, s.vc_goal) + '%';
+    document.getElementById('stat-vc-goal').textContent = '/ ' + vcGoal;
+    document.getElementById('bar-vc').style.width       = pct(s.vc_mtd, vcGoal) + '%';
+    setPace('pace-vc', onPace(s.vc_mtd), vcGoal, false);
 
     // Quotes
     document.getElementById('stat-quotes-val').textContent  = s.quotes_mtd;
     document.getElementById('stat-quotes-goal').textContent = '/ ' + (s.quotes_goal || '—');
     document.getElementById('bar-quotes').style.width       = pct(s.quotes_mtd, s.quotes_goal) + '%';
+    setPace('pace-quotes', onPace(s.quotes_mtd), s.quotes_goal, false);
   }
 
   // ── Update promo bars from team_goals ────────────────────────────────────────
