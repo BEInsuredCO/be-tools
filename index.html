@@ -355,6 +355,12 @@
     box-shadow: 0 2px 8px rgba(39,174,96,0.3);
   }
   .link-btn-featured:hover { opacity: 0.88; transform: scale(0.98); }
+  .link-btn-featured.yellow {
+    background: linear-gradient(135deg, #f7971e 0%, #ffd200 100%);
+    box-shadow: 0 2px 8px rgba(247,151,30,0.35);
+    color: #1a2340;
+  }
+  .link-btn-featured.yellow svg { stroke: #1a2340; }
   .link-btn-featured svg {
     width: 13px; height: 13px; stroke: #fff; fill: none;
     stroke-width: 2.2; flex-shrink: 0;
@@ -533,6 +539,10 @@
       <svg class="caret" id="caret-links" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
     <div class="section-body" id="body-links">
+      <a class="link-btn-featured yellow" href="https://app.meetpolly.io/proposals/new" target="_blank" onclick="window.open('https://app.meetpolly.io/proposals/new','_blank'); return false;">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+        Poly - New Proposal
+      </a>
       <a class="link-btn-featured" href="https://1drv.ms/x/c/0f1b483929fd58c9/EclY_Sk5SBsggA-uggAAAAABLL5rFfT_PbCz5jwy4qbSPQ?e=WH1bOF" target="_blank">
         <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
         Winbacks
