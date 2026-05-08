@@ -1,21 +1,10 @@
 {
-  "updated_at": "2026-05-08 06:20",
+  "updated_at": "2026-05-08 16:59",
   "staff": [
     {
       "name": "Amado Plata",
       "premium_mtd": 5703.92,
       "items_mtd": 10,
-      "items_goal": 25,
-      "vc_mtd": 0,
-      "vc_goal": 4500,
-      "quotes_mtd": 0,
-      "quotes_goal": 80,
-      "premium_goal": 25000
-    },
-    {
-      "name": "Brendon Ericson",
-      "premium_mtd": 0.0,
-      "items_mtd": 0,
       "items_goal": 25,
       "vc_mtd": 7,
       "vc_goal": 30,
@@ -24,9 +13,9 @@
       "premium_goal": 25000
     },
     {
-      "name": "Jackie Schmidt",
-      "premium_mtd": 8961.17,
-      "items_mtd": 4,
+      "name": "Brendon Ericson",
+      "premium_mtd": 0.0,
+      "items_mtd": 0,
       "items_goal": 25,
       "vc_mtd": 0,
       "vc_goal": 30,
@@ -35,13 +24,24 @@
       "premium_goal": 25000
     },
     {
+      "name": "Jackie Schmidt",
+      "premium_mtd": 8961.17,
+      "items_mtd": 4,
+      "items_goal": 25,
+      "vc_mtd": 4,
+      "vc_goal": 20,
+      "quotes_mtd": 10,
+      "quotes_goal": 80,
+      "premium_goal": 25000
+    },
+    {
       "name": "Jacqulyn Alcala-Casica",
       "premium_mtd": 4357.83,
       "items_mtd": 7,
       "items_goal": 25,
-      "vc_mtd": 0,
-      "vc_goal": 4500,
-      "quotes_mtd": 0,
+      "vc_mtd": 3,
+      "vc_goal": 20,
+      "quotes_mtd": 6,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -50,9 +50,9 @@
       "premium_mtd": 5789.06,
       "items_mtd": 6,
       "items_goal": 25,
-      "vc_mtd": 3,
-      "vc_goal": 20,
-      "quotes_mtd": 6,
+      "vc_mtd": 4,
+      "vc_goal": 30,
+      "quotes_mtd": 24,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -62,8 +62,8 @@
       "items_mtd": 1,
       "items_goal": 25,
       "vc_mtd": 0,
-      "vc_goal": 4500,
-      "quotes_mtd": 0,
+      "vc_goal": 30,
+      "quotes_mtd": 34,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -72,9 +72,9 @@
       "premium_mtd": 4279.42,
       "items_mtd": 12,
       "items_goal": 25,
-      "vc_mtd": 0,
-      "vc_goal": 30,
-      "quotes_mtd": 34,
+      "vc_mtd": 3,
+      "vc_goal": 20,
+      "quotes_mtd": 11,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -83,9 +83,9 @@
       "premium_mtd": 16011.0,
       "items_mtd": 10,
       "items_goal": 25,
-      "vc_mtd": 0,
-      "vc_goal": 4500,
-      "quotes_mtd": 0,
+      "vc_mtd": 7,
+      "vc_goal": 20,
+      "quotes_mtd": 14,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -94,9 +94,9 @@
       "premium_mtd": 5962.0,
       "items_mtd": 6,
       "items_goal": 25,
-      "vc_mtd": 7,
+      "vc_mtd": 5,
       "vc_goal": 20,
-      "quotes_mtd": 14,
+      "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
     }
