@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-05-14 19:24",
+  "updated_at": "2026-05-14 23:15",
   "staff": [
     {
       "name": "Amado Plata",
-      "premium_mtd": 22443.49,
+      "premium_mtd": 22457.78,
       "items_mtd": 25,
       "items_goal": 25,
-      "vc_mtd": 0,
-      "vc_goal": 4500,
-      "quotes_mtd": 0,
+      "vc_mtd": 19,
+      "vc_goal": 30,
+      "quotes_mtd": 23,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -17,18 +17,18 @@
       "premium_mtd": 0.0,
       "items_mtd": 0,
       "items_goal": 25,
-      "vc_mtd": 18,
+      "vc_mtd": 0,
       "vc_goal": 30,
-      "quotes_mtd": 23,
+      "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
     {
       "name": "Jackie Schmidt",
-      "premium_mtd": 16236.4,
-      "items_mtd": 14,
+      "premium_mtd": 22390.12,
+      "items_mtd": 18,
       "items_goal": 25,
-      "vc_mtd": 12,
+      "vc_mtd": 16,
       "vc_goal": 20,
       "quotes_mtd": 28,
       "quotes_goal": 80,
@@ -36,29 +36,29 @@
     },
     {
       "name": "Jacqulyn Alcala-Casica",
-      "premium_mtd": 4357.83,
+      "premium_mtd": 7765.13,
       "items_mtd": 7,
       "items_goal": 25,
-      "vc_mtd": 3,
+      "vc_mtd": 16,
       "vc_goal": 20,
-      "quotes_mtd": 14,
+      "quotes_mtd": 28,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
     {
       "name": "Noel Elhardt",
-      "premium_mtd": 6567.06,
-      "items_mtd": 9,
+      "premium_mtd": 2476.4,
+      "items_mtd": 5,
       "items_goal": 25,
-      "vc_mtd": 4,
-      "vc_goal": 30,
-      "quotes_mtd": 48,
+      "vc_mtd": 3,
+      "vc_goal": 20,
+      "quotes_mtd": 13,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
     {
       "name": "Ross MacDonald",
-      "premium_mtd": 2232.55,
+      "premium_mtd": 2200.0,
       "items_mtd": 4,
       "items_goal": 25,
       "vc_mtd": 2,
@@ -69,10 +69,10 @@
     },
     {
       "name": "Sara Ross",
-      "premium_mtd": 6670.42,
+      "premium_mtd": 29168.94,
       "items_mtd": 24,
       "items_goal": 25,
-      "vc_mtd": 3,
+      "vc_mtd": 8,
       "vc_goal": 20,
       "quotes_mtd": 19,
       "quotes_goal": 80,
@@ -80,19 +80,19 @@
     },
     {
       "name": "Sujan Sharma",
-      "premium_mtd": 31582.0,
-      "items_mtd": 24,
+      "premium_mtd": 36076.67,
+      "items_mtd": 25,
       "items_goal": 25,
       "vc_mtd": 19,
       "vc_goal": 20,
-      "quotes_mtd": 27,
+      "quotes_mtd": 26,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
     {
       "name": "Tiffany Keutz",
-      "premium_mtd": 8119.09,
-      "items_mtd": 8,
+      "premium_mtd": 7963.3,
+      "items_mtd": 7,
       "items_goal": 25,
       "vc_mtd": 7,
       "vc_goal": 20,
@@ -102,9 +102,9 @@
     }
   ],
   "team_goals": {
-    "vc_current": 68,
+    "vc_current": 74,
     "vc_goal": 126,
-    "premium_current": 81513.0,
+    "premium_current": 80883.0,
     "premium_goal": 150000.0
   }
 }
