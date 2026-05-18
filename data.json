@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-05-18 19:15",
+  "updated_at": "2026-05-18 21:12",
   "staff": [
     {
       "name": "Amado Plata",
-      "premium_mtd": 27245.53,
-      "items_mtd": 31,
+      "premium_mtd": 30088.33,
+      "items_mtd": 32,
       "items_goal": 25,
-      "vc_mtd": 24,
+      "vc_mtd": 25,
       "vc_goal": 30,
-      "quotes_mtd": 27,
+      "quotes_mtd": 28,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -25,10 +25,10 @@
     },
     {
       "name": "Jackie Schmidt",
-      "premium_mtd": 24873.64,
-      "items_mtd": 20,
+      "premium_mtd": 29149.11,
+      "items_mtd": 21,
       "items_goal": 25,
-      "vc_mtd": 17,
+      "vc_mtd": 18,
       "vc_goal": 20,
       "quotes_mtd": 34,
       "quotes_goal": 80,
@@ -50,20 +50,20 @@
       "premium_mtd": 4758.05,
       "items_mtd": 10,
       "items_goal": 25,
-      "vc_mtd": 1,
-      "vc_goal": 30,
-      "quotes_mtd": 62,
+      "vc_mtd": 0,
+      "vc_goal": 4500,
+      "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
     {
       "name": "Ross MacDonald",
-      "premium_mtd": 3453.03,
-      "items_mtd": 9,
+      "premium_mtd": 3502.16,
+      "items_mtd": 11,
       "items_goal": 25,
-      "vc_mtd": 5,
-      "vc_goal": 30,
-      "quotes_mtd": 63,
+      "vc_mtd": 0,
+      "vc_goal": 4500,
+      "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -72,20 +72,20 @@
       "premium_mtd": 29168.94,
       "items_mtd": 25,
       "items_goal": 25,
-      "vc_mtd": 8,
-      "vc_goal": 20,
-      "quotes_mtd": 19,
+      "vc_mtd": 0,
+      "vc_goal": 4500,
+      "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
     {
       "name": "Sujan Sharma",
-      "premium_mtd": 41225.67,
-      "items_mtd": 29,
+      "premium_mtd": 43354.67,
+      "items_mtd": 30,
       "items_goal": 25,
-      "vc_mtd": 22,
-      "vc_goal": 20,
-      "quotes_mtd": 33,
+      "vc_mtd": 0,
+      "vc_goal": 4500,
+      "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -94,17 +94,17 @@
       "premium_mtd": 7963.3,
       "items_mtd": 7,
       "items_goal": 25,
-      "vc_mtd": 7,
-      "vc_goal": 20,
+      "vc_mtd": 0,
+      "vc_goal": 4500,
       "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
     }
   ],
   "team_goals": {
-    "vc_current": 88,
+    "vc_current": 0,
     "vc_goal": 126,
-    "premium_current": 94324.0,
-    "premium_goal": 150000.0
+    "premium_current": 0,
+    "premium_goal": 150000
   }
 }
