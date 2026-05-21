@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-05-21 20:54",
+  "updated_at": "2026-05-21 22:19",
   "staff": [
     {
       "name": "Amado Plata",
       "premium_mtd": 34229.82,
       "items_mtd": 35,
       "items_goal": 25,
-      "vc_mtd": 26,
-      "vc_goal": 30,
-      "quotes_mtd": 41,
+      "vc_mtd": 0,
+      "vc_goal": 4500,
+      "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -17,9 +17,9 @@
       "premium_mtd": 0.0,
       "items_mtd": 0,
       "items_goal": 25,
-      "vc_mtd": 0,
+      "vc_mtd": 26,
       "vc_goal": 30,
-      "quotes_mtd": 0,
+      "quotes_mtd": 41,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -47,12 +47,12 @@
     },
     {
       "name": "Noel Elhardt",
-      "premium_mtd": 4924.7,
-      "items_mtd": 14,
+      "premium_mtd": 10466.66,
+      "items_mtd": 19,
       "items_goal": 25,
-      "vc_mtd": 2,
+      "vc_mtd": 7,
       "vc_goal": 30,
-      "quotes_mtd": 64,
+      "quotes_mtd": 66,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -102,9 +102,9 @@
     }
   ],
   "team_goals": {
-    "vc_current": 98,
+    "vc_current": 103,
     "vc_goal": 126,
-    "premium_current": 125558.0,
+    "premium_current": 131100.0,
     "premium_goal": 150000.0
   }
 }
