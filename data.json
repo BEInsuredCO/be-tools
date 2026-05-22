@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-05-22 19:44",
+  "updated_at": "2026-05-22 21:09",
   "staff": [
     {
       "name": "Amado Plata",
       "premium_mtd": 34229.82,
       "items_mtd": 35,
       "items_goal": 25,
-      "vc_mtd": 26,
-      "vc_goal": 30,
-      "quotes_mtd": 41,
+      "vc_mtd": 0,
+      "vc_goal": 20,
+      "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -17,18 +17,18 @@
       "premium_mtd": 0.0,
       "items_mtd": 0,
       "items_goal": 25,
-      "vc_mtd": 0,
+      "vc_mtd": 26,
       "vc_goal": 30,
-      "quotes_mtd": 0,
+      "quotes_mtd": 41,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
     {
       "name": "Jackie Schmidt",
-      "premium_mtd": 38772.47,
-      "items_mtd": 32,
+      "premium_mtd": 39505.49,
+      "items_mtd": 33,
       "items_goal": 25,
-      "vc_mtd": 24,
+      "vc_mtd": 25,
       "vc_goal": 20,
       "quotes_mtd": 39,
       "quotes_goal": 80,
@@ -48,7 +48,7 @@
     {
       "name": "Noel Elhardt",
       "premium_mtd": 11110.07,
-      "items_mtd": 21,
+      "items_mtd": 22,
       "items_goal": 25,
       "vc_mtd": 4,
       "vc_goal": 20,
@@ -61,9 +61,9 @@
       "premium_mtd": 6885.51,
       "items_mtd": 14,
       "items_goal": 25,
-      "vc_mtd": 4,
-      "vc_goal": 20,
-      "quotes_mtd": 16,
+      "vc_mtd": 0,
+      "vc_goal": 4500,
+      "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -102,9 +102,9 @@
     }
   ],
   "team_goals": {
-    "vc_current": 106,
+    "vc_current": 107,
     "vc_goal": 126,
-    "premium_current": 133160.0,
+    "premium_current": 133893.0,
     "premium_goal": 150000.0
   }
 }
