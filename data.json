@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-27 19:25",
+  "updated_at": "2026-05-27 21:55",
   "staff": [
     {
       "name": "Amado Plata",
@@ -69,12 +69,12 @@
     },
     {
       "name": "Sara Ross",
-      "premium_mtd": 29168.94,
-      "items_mtd": 25,
+      "premium_mtd": 29241.94,
+      "items_mtd": 28,
       "items_goal": 25,
       "vc_mtd": 3,
       "vc_goal": 20,
-      "quotes_mtd": 29,
+      "quotes_mtd": 30,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -104,7 +104,7 @@
   "team_goals": {
     "vc_current": 119,
     "vc_goal": 126,
-    "premium_current": 150078.0,
+    "premium_current": 150151.0,
     "premium_goal": 150000.0
   }
 }
