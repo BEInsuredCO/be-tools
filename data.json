@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-29 16:43",
+  "updated_at": "2026-05-29 19:32",
   "staff": [
     {
       "name": "Amado Plata",
@@ -47,8 +47,8 @@
     },
     {
       "name": "Noel Elhardt",
-      "premium_mtd": 11392.35,
-      "items_mtd": 32,
+      "premium_mtd": 11465.35,
+      "items_mtd": 39,
       "items_goal": 25,
       "vc_mtd": 10,
       "vc_goal": 30,
@@ -72,20 +72,20 @@
       "premium_mtd": 29241.94,
       "items_mtd": 28,
       "items_goal": 25,
-      "vc_mtd": 3,
-      "vc_goal": 20,
-      "quotes_mtd": 31,
+      "vc_mtd": 0,
+      "vc_goal": 4500,
+      "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
     {
       "name": "Sujan Sharma",
-      "premium_mtd": 54747.67,
-      "items_mtd": 43,
+      "premium_mtd": 57264.67,
+      "items_mtd": 44,
       "items_goal": 25,
-      "vc_mtd": 32,
+      "vc_mtd": 3,
       "vc_goal": 20,
-      "quotes_mtd": 51,
+      "quotes_mtd": 31,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -104,7 +104,7 @@
   "team_goals": {
     "vc_current": 123,
     "vc_goal": 126,
-    "premium_current": 156574.0,
+    "premium_current": 156647.0,
     "premium_goal": 150000.0
   }
 }
