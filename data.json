@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-29 23:12",
+  "updated_at": "2026-05-30 04:06",
   "staff": [
     {
       "name": "Amado Plata",
@@ -48,7 +48,7 @@
     {
       "name": "Noel Elhardt",
       "premium_mtd": 11465.35,
-      "items_mtd": 39,
+      "items_mtd": 40,
       "items_goal": 25,
       "vc_mtd": 10,
       "vc_goal": 30,
@@ -72,9 +72,9 @@
       "premium_mtd": 29241.94,
       "items_mtd": 28,
       "items_goal": 25,
-      "vc_mtd": 0,
-      "vc_goal": 4500,
-      "quotes_mtd": 0,
+      "vc_mtd": 3,
+      "vc_goal": 20,
+      "quotes_mtd": 31,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -83,9 +83,9 @@
       "premium_mtd": 57264.67,
       "items_mtd": 44,
       "items_goal": 25,
-      "vc_mtd": 3,
+      "vc_mtd": 32,
       "vc_goal": 20,
-      "quotes_mtd": 31,
+      "quotes_mtd": 51,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
