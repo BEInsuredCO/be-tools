@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-06-02 20:48",
+  "updated_at": "2026-06-02 23:02",
   "staff": [
     {
       "name": "Amado Plata",
-      "premium_mtd": 0.0,
-      "items_mtd": 0,
+      "premium_mtd": 2001.36,
+      "items_mtd": 3,
       "items_goal": 25,
-      "vc_mtd": 0,
+      "vc_mtd": 3,
       "vc_goal": 30,
-      "quotes_mtd": 5,
+      "quotes_mtd": 7,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -25,12 +25,12 @@
     },
     {
       "name": "Jackie Schmidt",
-      "premium_mtd": 2720.68,
-      "items_mtd": 3,
+      "premium_mtd": 3687.44,
+      "items_mtd": 4,
       "items_goal": 25,
-      "vc_mtd": 3,
+      "vc_mtd": 4,
       "vc_goal": 20,
-      "quotes_mtd": 5,
+      "quotes_mtd": 6,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -47,12 +47,12 @@
     },
     {
       "name": "Noel Elhardt",
-      "premium_mtd": 0.0,
-      "items_mtd": 1,
+      "premium_mtd": 73.0,
+      "items_mtd": 3,
       "items_goal": 25,
       "vc_mtd": 0,
       "vc_goal": 30,
-      "quotes_mtd": 4,
+      "quotes_mtd": 5,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -102,9 +102,9 @@
     }
   ],
   "team_goals": {
-    "vc_current": 7,
+    "vc_current": 11,
     "vc_goal": 126,
-    "premium_current": 5946.0,
+    "premium_current": 8988.0,
     "premium_goal": 150000.0
   }
 }
