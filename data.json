@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-03 05:00",
+  "updated_at": "2026-06-03 18:01",
   "staff": [
     {
       "name": "Amado Plata",
@@ -8,7 +8,7 @@
       "items_goal": 25,
       "vc_mtd": 3,
       "vc_goal": 30,
-      "quotes_mtd": 7,
+      "quotes_mtd": 12,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -25,21 +25,21 @@
     },
     {
       "name": "Jackie Schmidt",
-      "premium_mtd": 3687.44,
-      "items_mtd": 4,
+      "premium_mtd": 5688.6,
+      "items_mtd": 5,
       "items_goal": 25,
-      "vc_mtd": 4,
+      "vc_mtd": 5,
       "vc_goal": 20,
-      "quotes_mtd": 6,
+      "quotes_mtd": 10,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
     {
       "name": "Jacqulyn Alcala-Casica",
-      "premium_mtd": 0.0,
-      "items_mtd": 0,
+      "premium_mtd": 6179.46,
+      "items_mtd": 1,
       "items_goal": 25,
-      "vc_mtd": 0,
+      "vc_mtd": 1,
       "vc_goal": 20,
       "quotes_mtd": 4,
       "quotes_goal": 80,
@@ -47,12 +47,12 @@
     },
     {
       "name": "Noel Elhardt",
-      "premium_mtd": 73.0,
-      "items_mtd": 3,
+      "premium_mtd": 753.42,
+      "items_mtd": 8,
       "items_goal": 25,
-      "vc_mtd": 0,
+      "vc_mtd": 1,
       "vc_goal": 30,
-      "quotes_mtd": 5,
+      "quotes_mtd": 7,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -85,7 +85,7 @@
       "items_goal": 25,
       "vc_mtd": 0,
       "vc_goal": 20,
-      "quotes_mtd": 5,
+      "quotes_mtd": 10,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -102,9 +102,9 @@
     }
   ],
   "team_goals": {
-    "vc_current": 11,
+    "vc_current": 14,
     "vc_goal": 126,
-    "premium_current": 8988.0,
+    "premium_current": 17849.0,
     "premium_goal": 150000.0
   }
 }
