@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-03 18:01",
+  "updated_at": "2026-06-03 21:27",
   "staff": [
     {
       "name": "Amado Plata",
@@ -25,12 +25,12 @@
     },
     {
       "name": "Jackie Schmidt",
-      "premium_mtd": 5688.6,
-      "items_mtd": 5,
+      "premium_mtd": 7233.08,
+      "items_mtd": 6,
       "items_goal": 25,
-      "vc_mtd": 5,
+      "vc_mtd": 6,
       "vc_goal": 20,
-      "quotes_mtd": 10,
+      "quotes_mtd": 11,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -69,8 +69,8 @@
     },
     {
       "name": "Sara Ross",
-      "premium_mtd": 310.4,
-      "items_mtd": 7,
+      "premium_mtd": 699.4,
+      "items_mtd": 8,
       "items_goal": 25,
       "vc_mtd": 1,
       "vc_goal": 20,
@@ -102,9 +102,9 @@
     }
   ],
   "team_goals": {
-    "vc_current": 14,
+    "vc_current": 15,
     "vc_goal": 126,
-    "premium_current": 17849.0,
+    "premium_current": 19393.0,
     "premium_goal": 150000.0
   }
 }
