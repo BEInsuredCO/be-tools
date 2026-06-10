@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-09 22:26",
+  "updated_at": "2026-06-10 00:13",
   "staff": [
     {
       "name": "Amado Plata",
@@ -58,12 +58,12 @@
     },
     {
       "name": "Ross MacDonald",
-      "premium_mtd": 1412.26,
-      "items_mtd": 3,
+      "premium_mtd": 1981.68,
+      "items_mtd": 4,
       "items_goal": 25,
-      "vc_mtd": 2,
+      "vc_mtd": 3,
       "vc_goal": 30,
-      "quotes_mtd": 20,
+      "quotes_mtd": 21,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -80,12 +80,12 @@
     },
     {
       "name": "Sujan Sharma",
-      "premium_mtd": 5640.0,
-      "items_mtd": 2,
+      "premium_mtd": 9551.0,
+      "items_mtd": 5,
       "items_goal": 25,
-      "vc_mtd": 2,
+      "vc_mtd": 5,
       "vc_goal": 20,
-      "quotes_mtd": 23,
+      "quotes_mtd": 24,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -102,9 +102,9 @@
     }
   ],
   "team_goals": {
-    "vc_current": 32,
+    "vc_current": 36,
     "vc_goal": 126,
-    "premium_current": 39127.0,
+    "premium_current": 43608.0,
     "premium_goal": 150000.0
   }
 }
