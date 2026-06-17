@@ -1,21 +1,10 @@
 {
-  "updated_at": "2026-06-16 23:24",
+  "updated_at": "2026-06-17 04:58",
   "staff": [
     {
       "name": "Amado Plata",
       "premium_mtd": 13201.65,
       "items_mtd": 18,
-      "items_goal": 25,
-      "vc_mtd": 0,
-      "vc_goal": 4500,
-      "quotes_mtd": 0,
-      "quotes_goal": 80,
-      "premium_goal": 25000
-    },
-    {
-      "name": "Brendon Ericson",
-      "premium_mtd": 0.0,
-      "items_mtd": 0,
       "items_goal": 25,
       "vc_mtd": 14,
       "vc_goal": 30,
@@ -24,13 +13,24 @@
       "premium_goal": 25000
     },
     {
+      "name": "Brendon Ericson",
+      "premium_mtd": 0.0,
+      "items_mtd": 0,
+      "items_goal": 25,
+      "vc_mtd": 0,
+      "vc_goal": 4500,
+      "quotes_mtd": 0,
+      "quotes_goal": 80,
+      "premium_goal": 25000
+    },
+    {
       "name": "Jackie Schmidt",
       "premium_mtd": 13944.17,
       "items_mtd": 19,
       "items_goal": 25,
-      "vc_mtd": 13,
-      "vc_goal": 20,
-      "quotes_mtd": 31,
+      "vc_mtd": 0,
+      "vc_goal": 30,
+      "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -50,9 +50,9 @@
       "premium_mtd": 3599.96,
       "items_mtd": 15,
       "items_goal": 25,
-      "vc_mtd": 6,
-      "vc_goal": 30,
-      "quotes_mtd": 29,
+      "vc_mtd": 0,
+      "vc_goal": 4500,
+      "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -61,9 +61,9 @@
       "premium_mtd": 1906.68,
       "items_mtd": 9,
       "items_goal": 25,
-      "vc_mtd": 3,
+      "vc_mtd": 6,
       "vc_goal": 30,
-      "quotes_mtd": 33,
+      "quotes_mtd": 29,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
