@@ -1,21 +1,10 @@
 {
-  "updated_at": "2026-06-18 04:49",
+  "updated_at": "2026-06-18 16:31",
   "staff": [
     {
       "name": "Amado Plata",
       "premium_mtd": 13201.65,
       "items_mtd": 19,
-      "items_goal": 25,
-      "vc_mtd": 14,
-      "vc_goal": 30,
-      "quotes_mtd": 42,
-      "quotes_goal": 80,
-      "premium_goal": 25000
-    },
-    {
-      "name": "Brendon Ericson",
-      "premium_mtd": 0.0,
-      "items_mtd": 0,
       "items_goal": 25,
       "vc_mtd": 0,
       "vc_goal": 4500,
@@ -24,13 +13,24 @@
       "premium_goal": 25000
     },
     {
+      "name": "Brendon Ericson",
+      "premium_mtd": 0.0,
+      "items_mtd": 0,
+      "items_goal": 25,
+      "vc_mtd": 14,
+      "vc_goal": 30,
+      "quotes_mtd": 48,
+      "quotes_goal": 80,
+      "premium_goal": 25000
+    },
+    {
       "name": "Jackie Schmidt",
       "premium_mtd": 13944.17,
       "items_mtd": 19,
       "items_goal": 25,
-      "vc_mtd": 0,
-      "vc_goal": 30,
-      "quotes_mtd": 0,
+      "vc_mtd": 13,
+      "vc_goal": 20,
+      "quotes_mtd": 35,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -39,9 +39,9 @@
       "premium_mtd": 14620.75,
       "items_mtd": 8,
       "items_goal": 25,
-      "vc_mtd": 6,
-      "vc_goal": 20,
-      "quotes_mtd": 33,
+      "vc_mtd": 0,
+      "vc_goal": 4500,
+      "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -52,7 +52,7 @@
       "items_goal": 25,
       "vc_mtd": 6,
       "vc_goal": 20,
-      "quotes_mtd": 33,
+      "quotes_mtd": 42,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -61,17 +61,6 @@
       "premium_mtd": 1906.68,
       "items_mtd": 9,
       "items_goal": 25,
-      "vc_mtd": 7,
-      "vc_goal": 30,
-      "quotes_mtd": 35,
-      "quotes_goal": 80,
-      "premium_goal": 25000
-    },
-    {
-      "name": "Sara Ross",
-      "premium_mtd": 7250.14,
-      "items_mtd": 16,
-      "items_goal": 25,
       "vc_mtd": 0,
       "vc_goal": 4500,
       "quotes_mtd": 0,
@@ -79,13 +68,24 @@
       "premium_goal": 25000
     },
     {
-      "name": "Sujan Sharma",
-      "premium_mtd": 14477.89,
-      "items_mtd": 8,
+      "name": "Sara Ross",
+      "premium_mtd": 10874.94,
+      "items_mtd": 17,
       "items_goal": 25,
-      "vc_mtd": 4,
+      "vc_mtd": 3,
+      "vc_goal": 30,
+      "quotes_mtd": 49,
+      "quotes_goal": 80,
+      "premium_goal": 25000
+    },
+    {
+      "name": "Sujan Sharma",
+      "premium_mtd": 24200.89,
+      "items_mtd": 14,
+      "items_goal": 25,
+      "vc_mtd": 12,
       "vc_goal": 20,
-      "quotes_mtd": 18,
+      "quotes_mtd": 47,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -94,17 +94,17 @@
       "premium_mtd": 9959.14,
       "items_mtd": 9,
       "items_goal": 25,
-      "vc_mtd": 4,
+      "vc_mtd": 8,
       "vc_goal": 20,
-      "quotes_mtd": 18,
+      "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
     }
   ],
   "team_goals": {
-    "vc_current": 63,
+    "vc_current": 69,
     "vc_goal": 126,
-    "premium_current": 72344.0,
+    "premium_current": 85692.0,
     "premium_goal": 150000.0
   }
 }
