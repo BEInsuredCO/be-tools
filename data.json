@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-23 15:48",
+  "updated_at": "2026-06-23 17:54",
   "staff": [
     {
       "name": "Amado Plata",
@@ -47,10 +47,10 @@
     },
     {
       "name": "Noel Elhardt",
-      "premium_mtd": 6172.53,
-      "items_mtd": 18,
+      "premium_mtd": 7667.19,
+      "items_mtd": 21,
       "items_goal": 25,
-      "vc_mtd": 7,
+      "vc_mtd": 10,
       "vc_goal": 30,
       "quotes_mtd": 46,
       "quotes_goal": 80,
@@ -61,7 +61,7 @@
       "premium_mtd": 12647.52,
       "items_mtd": 17,
       "items_goal": 25,
-      "vc_mtd": 7,
+      "vc_mtd": 10,
       "vc_goal": 30,
       "quotes_mtd": 46,
       "quotes_goal": 80,
@@ -102,9 +102,9 @@
     }
   ],
   "team_goals": {
-    "vc_current": 90,
+    "vc_current": 93,
     "vc_goal": 126,
-    "premium_current": 116011.0,
+    "premium_current": 117505.0,
     "premium_goal": 150000.0
   }
 }
