@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-23 23:57",
+  "updated_at": "2026-06-24 04:13",
   "staff": [
     {
       "name": "Amado Plata",
@@ -61,9 +61,9 @@
       "premium_mtd": 12647.52,
       "items_mtd": 17,
       "items_goal": 25,
-      "vc_mtd": 10,
-      "vc_goal": 30,
-      "quotes_mtd": 74,
+      "vc_mtd": 0,
+      "vc_goal": 4500,
+      "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -72,9 +72,9 @@
       "premium_mtd": 14317.43,
       "items_mtd": 19,
       "items_goal": 25,
-      "vc_mtd": 6,
-      "vc_goal": 20,
-      "quotes_mtd": 24,
+      "vc_mtd": 10,
+      "vc_goal": 30,
+      "quotes_mtd": 74,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
