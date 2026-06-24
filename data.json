@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-24 19:46",
+  "updated_at": "2026-06-24 21:22",
   "staff": [
     {
       "name": "Amado Plata",
@@ -17,20 +17,20 @@
       "premium_mtd": 0.0,
       "items_mtd": 0,
       "items_goal": 25,
-      "vc_mtd": 16,
-      "vc_goal": 30,
-      "quotes_mtd": 64,
+      "vc_mtd": 0,
+      "vc_goal": 4500,
+      "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
     {
       "name": "Jackie Schmidt",
       "premium_mtd": 13944.17,
-      "items_mtd": 22,
+      "items_mtd": 27,
       "items_goal": 25,
-      "vc_mtd": 13,
-      "vc_goal": 20,
-      "quotes_mtd": 39,
+      "vc_mtd": 0,
+      "vc_goal": 30,
+      "quotes_mtd": 1,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -39,9 +39,9 @@
       "premium_mtd": 16206.79,
       "items_mtd": 14,
       "items_goal": 25,
-      "vc_mtd": 0,
-      "vc_goal": 4500,
-      "quotes_mtd": 0,
+      "vc_mtd": 10,
+      "vc_goal": 20,
+      "quotes_mtd": 48,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -51,8 +51,8 @@
       "items_mtd": 21,
       "items_goal": 25,
       "vc_mtd": 10,
-      "vc_goal": 20,
-      "quotes_mtd": 48,
+      "vc_goal": 30,
+      "quotes_mtd": 49,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -72,9 +72,9 @@
       "premium_mtd": 14317.43,
       "items_mtd": 20,
       "items_goal": 25,
-      "vc_mtd": 0,
-      "vc_goal": 4500,
-      "quotes_mtd": 0,
+      "vc_mtd": 10,
+      "vc_goal": 30,
+      "quotes_mtd": 80,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -94,8 +94,8 @@
       "premium_mtd": 12532.84,
       "items_mtd": 10,
       "items_goal": 25,
-      "vc_mtd": 9,
-      "vc_goal": 20,
+      "vc_mtd": 0,
+      "vc_goal": 4500,
       "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
