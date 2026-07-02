@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-02 17:47",
+  "updated_at": "2026-07-02 19:24",
   "staff": [
     {
       "name": "Amado Plata",
@@ -25,12 +25,12 @@
     },
     {
       "name": "Jackie Schmidt",
-      "premium_mtd": 3293.98,
-      "items_mtd": 3,
+      "premium_mtd": 3366.98,
+      "items_mtd": 7,
       "items_goal": 25,
       "vc_mtd": 2,
       "vc_goal": 20,
-      "quotes_mtd": 3,
+      "quotes_mtd": 4,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -104,7 +104,7 @@
   "team_goals": {
     "vc_current": 6,
     "vc_goal": 126,
-    "premium_current": 8677.0,
+    "premium_current": 8750.0,
     "premium_goal": 150000.0
   }
 }
