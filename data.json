@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-07 15:44",
+  "updated_at": "2026-07-07 17:59",
   "staff": [
     {
       "name": "Amado Plata",
@@ -7,8 +7,8 @@
       "items_mtd": 0,
       "items_goal": 25,
       "vc_mtd": 0,
-      "vc_goal": 20,
-      "quotes_mtd": 0,
+      "vc_goal": 30,
+      "quotes_mtd": 5,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -19,7 +19,7 @@
       "items_goal": 25,
       "vc_mtd": 0,
       "vc_goal": 30,
-      "quotes_mtd": 5,
+      "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -59,10 +59,10 @@
     {
       "name": "Ross MacDonald",
       "premium_mtd": 0.0,
-      "items_mtd": 0,
+      "items_mtd": 1,
       "items_goal": 25,
       "vc_mtd": 0,
-      "vc_goal": 4500,
+      "vc_goal": 30,
       "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
@@ -73,8 +73,8 @@
       "items_mtd": 1,
       "items_goal": 25,
       "vc_mtd": 0,
-      "vc_goal": 30,
-      "quotes_mtd": 0,
+      "vc_goal": 20,
+      "quotes_mtd": 7,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
