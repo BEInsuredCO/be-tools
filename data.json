@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-08 15:22",
+  "updated_at": "2026-07-08 17:29",
   "staff": [
     {
       "name": "Amado Plata",
@@ -7,8 +7,8 @@
       "items_mtd": 0,
       "items_goal": 25,
       "vc_mtd": 0,
-      "vc_goal": 30,
-      "quotes_mtd": 5,
+      "vc_goal": 20,
+      "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -18,7 +18,7 @@
       "items_mtd": 0,
       "items_goal": 25,
       "vc_mtd": 0,
-      "vc_goal": 30,
+      "vc_goal": 20,
       "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
@@ -28,9 +28,9 @@
       "premium_mtd": 3366.98,
       "items_mtd": 8,
       "items_goal": 25,
-      "vc_mtd": 2,
+      "vc_mtd": 0,
       "vc_goal": 20,
-      "quotes_mtd": 8,
+      "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -39,9 +39,9 @@
       "premium_mtd": 6053.19,
       "items_mtd": 5,
       "items_goal": 25,
-      "vc_mtd": 1,
+      "vc_mtd": 0,
       "vc_goal": 20,
-      "quotes_mtd": 3,
+      "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -50,9 +50,9 @@
       "premium_mtd": 6625.16,
       "items_mtd": 5,
       "items_goal": 25,
-      "vc_mtd": 3,
+      "vc_mtd": 0,
       "vc_goal": 30,
-      "quotes_mtd": 16,
+      "quotes_mtd": 5,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -63,7 +63,7 @@
       "items_goal": 25,
       "vc_mtd": 0,
       "vc_goal": 30,
-      "quotes_mtd": 0,
+      "quotes_mtd": 5,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -73,8 +73,8 @@
       "items_mtd": 1,
       "items_goal": 25,
       "vc_mtd": 0,
-      "vc_goal": 20,
-      "quotes_mtd": 7,
+      "vc_goal": 30,
+      "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
