@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-10 21:06",
+  "updated_at": "2026-07-10 23:12",
   "staff": [
     {
       "name": "Amado Plata",
@@ -28,9 +28,9 @@
       "premium_mtd": 5473.84,
       "items_mtd": 13,
       "items_goal": 25,
-      "vc_mtd": 3,
-      "vc_goal": 20,
-      "quotes_mtd": 12,
+      "vc_mtd": 0,
+      "vc_goal": 30,
+      "quotes_mtd": 0,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -39,9 +39,9 @@
       "premium_mtd": 6053.19,
       "items_mtd": 5,
       "items_goal": 25,
-      "vc_mtd": 1,
+      "vc_mtd": 3,
       "vc_goal": 20,
-      "quotes_mtd": 3,
+      "quotes_mtd": 12,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -69,12 +69,12 @@
     },
     {
       "name": "Sara Ross",
-      "premium_mtd": 0.0,
-      "items_mtd": 1,
+      "premium_mtd": 162.9,
+      "items_mtd": 2,
       "items_goal": 25,
-      "vc_mtd": 0,
+      "vc_mtd": 1,
       "vc_goal": 20,
-      "quotes_mtd": 7,
+      "quotes_mtd": 8,
       "quotes_goal": 80,
       "premium_goal": 25000
     },
@@ -94,17 +94,17 @@
       "premium_mtd": 0.0,
       "items_mtd": 0,
       "items_goal": 25,
-      "vc_mtd": 0,
+      "vc_mtd": 10,
       "vc_goal": 20,
-      "quotes_mtd": 0,
+      "quotes_mtd": 33,
       "quotes_goal": 80,
       "premium_goal": 25000
     }
   ],
   "team_goals": {
-    "vc_current": 18,
+    "vc_current": 19,
     "vc_goal": 126,
-    "premium_current": 36334.0,
+    "premium_current": 36497.0,
     "premium_goal": 150000.0
   }
 }
